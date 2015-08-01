@@ -59,7 +59,64 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\audio\destroy.wav" />
+    <Content Include="assets\audio\pickupcoin.wav" />
+    <Content Include="assets\images\Background.png" />
+    <Content Include="assets\images\Background2.png" />
+    <Content Include="assets\images\bullet.png" />
+    <Content Include="assets\images\cloud.png" />
+    <Content Include="assets\images\colliding.png" />
+    <Content Include="assets\images\enemy.png" />
+    <Content Include="assets\images\gameover.png" />
+    <Content Include="assets\images\island.png" />
+    <Content Include="assets\images\mainbackground.png" />
+    <Content Include="assets\images\menu.png" />
+    <Content Include="assets\images\MyJason.png" />
+    <Content Include="assets\images\obstacle1.png" />
+    <Content Include="assets\images\obstacle2.png" />
+    <Content Include="assets\images\ocean.gif" />
+    <Content Include="assets\images\plane.png" />
+    <Content Include="assets\images\playagain.png" />
+    <Content Include="assets\images\ring.png" />
+    <Content Include="assets\images\startbutton.png" />
+    <Content Include="assets\images\superman.png" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\config\config.js" />
+    <Content Include="Scripts\constants.js" />
+    <Content Include="Scripts\game.js.map" />
+    <Content Include="Scripts\managers\asset.js.map" />
+    <Content Include="Scripts\managers\bullet.js" />
+    <Content Include="Scripts\managers\collision.js.map" />
+    <Content Include="Scripts\objects\bullet.js" />
+    <Content Include="Scripts\objects\button.js" />
+    <Content Include="Scripts\objects\city.js" />
+    <Content Include="Scripts\objects\colliding.js" />
+    <Content Include="Scripts\objects\gameObject.js.map" />
+    <Content Include="Scripts\objects\ring.js" />
+    <Content Include="Scripts\objects\scoreboard.js.map" />
+    <Content Include="Scripts\objects\superman.js" />
+    <Content Include="Scripts\States\gameover.js" />
+    <Content Include="Scripts\States\menu.js" />
+    <Content Include="Scripts\States\play.js.map" />
+    <Content Include="Scripts\utility\utility.js.map" />
+    <Content Include="assets\audio\engine.ogg" />
+    <Content Include="assets\audio\thunder.ogg" />
+    <Content Include="assets\audio\yay.ogg" />
+    <Content Include="assets\images\Thumbs.db" />
+    <Content Include="assets\audio\supermansound.ogg" />
+    <Content Include="assets\images\explosion.gif-c200" />
+    <Content Include="Scripts\constants.js.map" />
+    <Content Include="Scripts\objects\button.js.map" />
+    <Content Include="Scripts\objects\city.js.map" />
+    <Content Include="Scripts\objects\colliding.js.map" />
+    <Content Include="Scripts\objects\ring.js.map" />
+    <Content Include="Scripts\objects\superman.js.map" />
+    <Content Include="Scripts\States\gameover.js.map" />
+    <Content Include="Scripts\States\menu.js.map" />
+    <Content Include="Scripts\config\config.js.map" />
+    <Content Include="Scripts\managers\bullet.js.map" />
+    <Content Include="Scripts\objects\bullet.js.map" />
+    <Content Include="assets\images\MyJason.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -72,11 +129,18 @@
     <Content Include="assets\images\pinkButton.png" />
     <Content Include="css\main.css" />
     <Content Include="index.html" />
+    <Content Include="Scripts\game.js" />
     <Content Include="Scripts\lib\easeljs-0.8.0.min.js" />
     <Content Include="Scripts\lib\preloadjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\soundjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\tweenjs-0.6.0.min.js" />
     <Content Include="Scripts\lib\Stats.js" />
+    <Content Include="Scripts\managers\asset.js" />
+    <Content Include="Scripts\managers\collision.js" />
+    <Content Include="Scripts\objects\gameObject.js" />
+    <Content Include="Scripts\objects\scoreboard.js" />
+    <Content Include="Scripts\States\play.js" />
+    <Content Include="Scripts\utility\utility.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,13 +150,32 @@
     <Folder Include="assets\fonts\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\config\config.ts" />
+    <TypeScriptCompile Include="Scripts\constants.ts" />
     <TypeScriptCompile Include="Scripts\game.ts" />
+    <TypeScriptCompile Include="Scripts\managers\asset.ts" />
+    <TypeScriptCompile Include="Scripts\managers\bullet.ts" />
+    <TypeScriptCompile Include="Scripts\managers\collision.ts" />
+    <TypeScriptCompile Include="Scripts\objects\bullet.ts" />
+    <TypeScriptCompile Include="Scripts\objects\button.ts" />
+    <TypeScriptCompile Include="Scripts\objects\city.ts" />
+    <TypeScriptCompile Include="Scripts\objects\colliding.ts" />
+    <TypeScriptCompile Include="Scripts\objects\gameObject.ts" />
+    <TypeScriptCompile Include="Scripts\objects\obstacle.ts" />
+    <TypeScriptCompile Include="Scripts\objects\obstacle_down.ts" />
+    <TypeScriptCompile Include="Scripts\objects\ring.ts" />
+    <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
+    <TypeScriptCompile Include="Scripts\objects\superman.ts" />
+    <TypeScriptCompile Include="Scripts\States\gameover.ts" />
+    <TypeScriptCompile Include="Scripts\States\menu.ts" />
+    <TypeScriptCompile Include="Scripts\States\play.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\preloadjs\preloadjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\soundjs\soundjs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\stats\stats.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
+    <TypeScriptCompile Include="Scripts\utility\utility.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

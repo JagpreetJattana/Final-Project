@@ -1,0 +1,34 @@
+{
+
+"images": [
+    "MyJason.png"
+],
+
+"frames": [
+    [2, 2, 54, 65, 0, 0, 0],
+    [2, 69, 48, 300, 0, 0, 0],
+    [2, 371, 48, 300, 0, 0, 0],
+    [2, 673, 35, 44, 0, 0, 0],
+    [39, 673, 6, 6, 0, 0, 0],
+    [2, 719, 35, 44, 0, 0, 0],
+    [2, 765, 35, 44, 0, 0, 0],
+    [2, 811, 35, 44, 0, 0, 0]
+],
+
+"animations": {
+    "ring": [0],
+    "obstacle1": [1],
+    "obstacle2": [2],
+    "Dom": [3],
+    "bullet": [4],
+    "Dom1": [5],
+    "Dom2": [6],
+    "Dom3": [7]
+},
+
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:d31f0e97fb0a0888358c56f0b6b82662:a62601488cca63e5997ed2b343013565:a7480ab21c6693f5045a2ed09129adaa$",
+        "Created with TexturePacker (https://www.codeandweb.com/texturepacker) for EaselJS"
+]
+
+}

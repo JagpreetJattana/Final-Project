@@ -1,19 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<!-- Author: Tom Tsiliopoulos -->
-<!-- App: CreateJS BoilerPlate -->
-<!-- Date: May 12, 2015 -->
-<!-- Description: A BoilerPlate (Template) for the CreateJS framework -->
+<!-- Author: Jagpreet Jattana -->
+<!-- App: The Side Scroller -->
+<!-- Date: July 02, 2015 -->
+<!-- Description: The Side Scroller Game -->
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>COMP397 - Lesson 02 - Part 2</title>
+    <title>The Side Scroller</title>
     <!-- CSS Section -->
     <link href="css/main.css" rel="stylesheet" />
 </head>
 <body onload="preload();">
     <!-- Game Container -->
-    <canvas id="canvas" width="320" height="480"></canvas>
+    <canvas id="canvas" width="640" height="390"></canvas>
 
     <!-- JavaScript Section -->
     <script src="Scripts/lib/Stats.js"></script>
@@ -21,6 +21,28 @@
     <script src="Scripts/lib/tweenjs-0.6.0.min.js"></script>
     <script src="Scripts/lib/soundjs-0.6.0.min.js"></script>
     <script src="Scripts/lib/preloadjs-0.6.0.min.js"></script>
+
+    <!-- Game Objects -->
+    <script src="Scripts/config/config.js"></script>
+    <script src="Scripts/utility/utility.js"></script>
+    <script src="Scripts/managers/asset.js"></script>
+    <script src="Scripts/objects/gameObject.js"></script>
+    <script src="Scripts/objects/city.js"></script>
+    <script src="Scripts/objects/superman.js"></script>
+    <script src="Scripts/objects/bullet.js"></script>
+    <script src="Scripts/objects/ring.js"></script>
+   
+    <script src="Scripts/objects/obstacle.js"></script>
+    <script src="Scripts/objects/obstacle_down.js"></script>
+    <script src="Scripts/objects/scoreboard.js"></script>
+    <script src="Scripts/managers/bullet.js"></script>
+    <script src="Scripts/managers/collision.js"></script>
+    <script src="Scripts/objects/colliding.js"></script>
+    <script src="Scripts/states/play.js"></script>
+    <script src="Scripts/constants.js"></script>
+    <script src="Scripts/objects/button.js"></script>
+    <script src="Scripts/states/menu.js"></script>
+    <script src="Scripts/states/gameover.js"></script>
 
     <!-- Game Scripts -->
     <script src="Scripts/game.js"></script>

@@ -4,31 +4,76 @@
 /// <reference path="typings/soundjs/soundjs.d.ts" />
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
 
+/// <reference path="config/config.ts" />
+/// <reference path="managers/bullet.ts" />
+/// <reference path="utility/utility.ts" />
+/// <reference path="managers/asset.ts" />
+
+/// <reference path="objects/gameobject.ts" />
+/// <reference path="objects/city.ts" />
+/// <reference path="objects/superman.ts" />
+/// <reference path="objects/bullet.ts" />
+/// <reference path="objects/ring.ts" />
+
+/// <reference path="objects/obstacle.ts" />
+/// <reference path="objects/obstacle_down.ts" />
+
+/// <reference path="objects/scoreboard.ts" />
+/// <reference path="managers/collision.ts" />
+/// <reference path="objects/colliding.ts" />
+/// <reference path="constants.ts" />
+
+/// <reference path="states/play.ts" />
+/// <reference path="objects/button.ts" />
+
+/// <reference path="states/menu.ts" />
+/// <reference path="states/gameover.ts" />
+
+
 
 // Game Framework Variables
 var canvas = document.getElementById("canvas");
 var stage: createjs.Stage;
 var stats: Stats;
+var game: createjs.Container;
+var game: createjs.Container;
 
-var assets: createjs.LoadQueue;
-var manifest = [
-    { id: "pinkButton", src: "assets/images/pinkButton.png" },
-    { id: "clicked", src: "assets/audio/clicked.wav" }
-];
+
+
+
+
 
 
 // Game Variables
-var helloLabel: createjs.Text; // create a reference
-var pinkButton: createjs.Bitmap;
+var city: objects.City;
+var colliding: objects.Colliding;
+var superman: objects.Superman;
+var menulbl: createjs.Bitmap;
+var gameoverlbl: createjs.Bitmap;
+var ring: objects.Ring;
+
+var obstacle1: objects.Obstacle;
+var obstacle_down: objects.Obstacle_down;
+var scoreboard: objects.ScoreBoard;
+var play: states.Play;
+var menu: states.Menu;
+var gameover: states.Gameover;
+var currentstate;
+//Game managers
+var assets: managers.Assets;
+var bulletManager: managers.BulletManager;
+var collision: managers.Collision;
+
+//game buttons
+var startbutton: objects.Button;
+var playagainbutton: objects.Button;
 
 
 // Preloader Function
 function preload() {
-    assets = new createjs.LoadQueue();
-    assets.installPlugin(createjs.Sound);
-    // event listener triggers when assets are completely loaded
-    assets.on("complete", init, this); 
-    assets.loadManifest(manifest);
+    assets = new managers.Assets();
+    bulletManager = new managers.BulletManager();
+   
     //Setup statistics object
     setupStats();
 }
@@ -40,6 +85,7 @@ function init() {
     createjs.Ticker.setFPS(60); // framerate 60 fps for the game
     // event listener triggers 60 times every second
     createjs.Ticker.on("tick", gameLoop); 
+    optimizeForMobile();
 
     // calling main game function
     main();
@@ -52,7 +98,7 @@ function setupStats() {
 
     // align bottom-right
     stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '330px';
+    stats.domElement.style.left = '650px';
     stats.domElement.style.top = '10px';
 
     document.body.appendChild(stats.domElement);
@@ -63,45 +109,52 @@ function setupStats() {
 function gameLoop() {
     stats.begin(); // Begin measuring
 
-    stage.update();
+    ///updating current state
+    currentstate.update();
+  
+  
 
     stats.end(); // end measuring
 }
 
-// Callback function that allows me to respond to button click events
-function pinkButtonClicked(event: createjs.MouseEvent) {
-    createjs.Sound.play("clicked");
+// Add touch support for mobile devices
+function optimizeForMobile() {
+    if (createjs.Touch.isSupported()) {
+        createjs.Touch.enable(stage);
+    }
 }
 
-// Callback functions that change the alpha transparency of the button
-
-// Mouseover event
-function pinkButtonOver() {
-    pinkButton.alpha = 0.8;
-}
-
-// Mouseout event
-function pinkButtonOut() {
-    pinkButton.alpha = 1.0;
-}
 
 // Our Main Game Function
 function main() {
-    console.log("Game is Running");
-    helloLabel = new createjs.Text("Hello World!", "40px Consolas", "#000000");
-    helloLabel.regX = helloLabel.getMeasuredWidth() * 0.5;
-    helloLabel.regY = helloLabel.getMeasuredHeight() * 0.5;
-    helloLabel.x = 160;
-    helloLabel.y = 190;
-    stage.addChild(helloLabel);
+ 
+    menu = new states.Menu();
+    //currentstate = menu;
+    play = new states.Play();
+    currentstate = play;
 
-    pinkButton = new createjs.Bitmap(assets.getResult("pinkButton"));
-    pinkButton.regX = pinkButton.getBounds().width * 0.5;
-    pinkButton.regY = pinkButton.getBounds().height * 0.5;
-    pinkButton.x = 160;
-    pinkButton.y = 270;
-    stage.addChild(pinkButton);
-    pinkButton.on("click", pinkButtonClicked);
-    pinkButton.on("mouseover", pinkButtonOver);
-    pinkButton.on("mouseout", pinkButtonOut);
+}
+
+function changeState(state: number): void {
+    // Launch Various "screens"
+    switch (state) {
+        case constants.MENU_STATE:
+            // instantiate menu screen
+           // currentstate = menu;
+            currentstate = play;
+            break;
+
+        case constants.PLAY_STATE:
+            // instantiate play screen
+            play = new states.Play();
+            currentstate = play;
+
+            break;
+
+        case constants.GAME_OVER_STATE:
+            gameover = new states.Gameover();
+           // currentstate = gameover;
+            currentstate = play;
+            break;
+    }
 }

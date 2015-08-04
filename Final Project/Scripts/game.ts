@@ -5,14 +5,16 @@
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
 
 /// <reference path="config/config.ts" />
-/// <reference path="managers/bullet.ts" />
+/// <reference path="managers/arrow.ts" />
+
 /// <reference path="utility/utility.ts" />
 /// <reference path="managers/asset.ts" />
 
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/city.ts" />
-/// <reference path="objects/superman.ts" />
-/// <reference path="objects/bullet.ts" />
+/// <reference path="objects/doraemon.ts" />
+
+/// <reference path="objects/arrow.ts" />
 /// <reference path="objects/ring.ts" />
 
 /// <reference path="objects/obstacle.ts" />
@@ -47,7 +49,7 @@ var game: createjs.Container;
 // Game Variables
 var city: objects.City;
 var colliding: objects.Colliding;
-var superman: objects.Superman;
+var doraemon: objects.Doraemon;
 var menulbl: createjs.Bitmap;
 var gameoverlbl: createjs.Bitmap;
 var ring: objects.Ring;
@@ -61,7 +63,7 @@ var gameover: states.Gameover;
 var currentstate;
 //Game managers
 var assets: managers.Assets;
-var bulletManager: managers.BulletManager;
+var bulletManager: managers.ArrowManager;
 var collision: managers.Collision;
 
 //game buttons
@@ -72,7 +74,7 @@ var playagainbutton: objects.Button;
 // Preloader Function
 function preload() {
     assets = new managers.Assets();
-    bulletManager = new managers.BulletManager();
+    bulletManager = new managers.ArrowManager();
    
     //Setup statistics object
     setupStats();

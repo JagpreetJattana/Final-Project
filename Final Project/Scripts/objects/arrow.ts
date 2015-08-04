@@ -1,9 +1,9 @@
 ﻿module objects {
 
-    // Bullet Class
-    export class Bullet extends objects.GameObject {
+    // Arrow Class
+    export class Arrow extends objects.GameObject {
         constructor() {
-            super("bullet");
+            super("Arrow");
             this.init();
             game.addChild(this);
         }
@@ -12,8 +12,9 @@
         public init() {
             
            
-            this.x = superman.x;
-            this.y = superman.y;
+          
+            this.x = doraemon.x;
+           this.y = doraemon.y;
         }
 
         update() {
@@ -21,4 +22,4 @@
            
         }
     }
-} 
+}  

@@ -1,9 +1,10 @@
-﻿module managers {
+﻿ module managers {
     // BULLET MANAGER CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++
-    export class BulletManager {
+    export class ArrowManager {
         // PRIVATE PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++
-        private _bullets = [];
-        private _bulletCount: number = 0;
+        private _arrows = [];
+        private _arrowCount: number = 0;
+        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         constructor() {
 
@@ -14,48 +15,49 @@
         // BULLET FIRE METHOD
         public _fire() {
             // create two bullets on either side of  plane
-            var bullet: objects.Bullet = new objects.Bullet();
+            var arrow: objects.Arrow = new objects.Arrow();
 
-            game.addChild(bullet);
-            bullet.init();
-            this._bullets.push(bullet);
+            game.addChild(arrow);
+            arrow.init();
+            this._arrows.push(arrow);
+            
 
             // Play Bullet Sound
            // createjs.Sound.play("bullet");
         } // end fire
 
         // BULLET DESTROY METHOD
-        private _destroyBullet(bullet: objects.Bullet) {
-            var len: number = this._bullets.length;
+        private _destroyArrow(bullet: objects.Arrow) {
+            var len: number = this._arrows.length;
 
             // remove bullet from game and from bullet array
             for (var count = 0; count < len; count++) {
-                if (this._bullets[count] == bullet) {
-                    this._bullets.splice(count, 1);
+                if (this._arrows[count] == bullet) {
+                    this._arrows.splice(count, 1);
                     game.removeChild(bullet);
                 }
             }
         } // end destroyBullet
 
-        private _checkBounds(bullet: objects.Bullet) {
+        private _checkBounds(arrow: objects.Arrow) {
             // check to see if the bullet has left the top of the stage
-            if (bullet.y < 0) {
-                this._destroyBullet(bullet);
+            if (arrow.y < 0) {
+                this._destroyArrow(arrow);
             }
 
              // check to see if the bullet has left the bottom of the stage
-            if (bullet.y > 480) {
-                this._destroyBullet(bullet);
+            if (arrow.y > 480) {
+                this._destroyArrow(arrow);
             }
 
             // check to see if the bullet has left the left side of the stage
-            if (bullet.x < 0) {
-                this._destroyBullet(bullet);
+            if (arrow.x < 0) {
+                this._destroyArrow(arrow);
             }
 
             // check to see if the bullet has left the right side of the stage
-            if (bullet.x > 640) {
-                this._destroyBullet(bullet);
+            if (arrow.x > 640) {
+                this._destroyArrow(arrow);
             }
         }
 
@@ -64,23 +66,23 @@
 
         // UPDATE METHOD
        public update() {
-            var len: number = this._bullets.length;
-            var bullet: objects.Bullet;
+            var len: number = this._arrows.length;
+            var arrow: objects.Arrow;
 
             for (var count = len - 1; count >= 0; count--) {
-                bullet = this._bullets[count];
+                arrow = this._arrows[count];
                 // move current bullet up stage
-                bullet.update();
+                arrow.update();
 
-                this._checkBounds(bullet);
+                this._checkBounds(arrow);
             } 
 
             // fire bullet if mouse button is clicked or game container is tapped
-            if ((config.FIRING) && (this._bulletCount % 10 == 0)) {
+            if ((config.FIRING) && (this._arrowCount % 10 == 0)) {
                     this._fire();
             }
             //increment bullet count to limit number of bullets being fired
-            this._bulletCount++;
+            this._arrowCount++;
         } // end update
 
         

@@ -1,6 +1,6 @@
 ﻿module objects {
-    // Superman Class ++++++++++++++++++++++++++++++++++++++
-    export class Superman extends objects.GameObject {
+    // Domraemon Class ++++++++++++++++++++++++++++++++++++++
+    export class Doraemon extends objects.GameObject {
       
 
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
@@ -8,22 +8,22 @@
             super(imageString);
             window.onkeydown = this.jump;
             window.onkeyup = this.jumpdown;
-            
-                 
-            
+
+
+
             this.dy = 5;
             this.y = 0;
-            
+
             this.soundString = "supermansound";
             this.x = 300;
             createjs.Sound.stop();
-              createjs.Sound.play(this.soundString, { "loop": -1 });
+            createjs.Sound.play(this.soundString, { "loop": -1 });
 
         }
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
-            this.y += this.dy; 
+            this.y += this.dy;
             this.checkbounds();
             this.performingjump();
             //this.jump();// position superman under mouse
@@ -31,31 +31,31 @@
 
         private checkbounds() {
             if (this.y > 400) {
-                
+
                 this.y = 0;
             }
             else if (this.y < 0) {
-                this.y += 10;
-                config.TURN_LEFT = false;
+                this.y += 7;
+                config.JUMP = false;
             }
         }
 
         private jump(event: KeyboardEvent) {
-        
+
 
             switch (event.keyCode) {
                 case config.KEY_UP:
-                    config.TURN_LEFT = true;
-                   
+                    config.JUMP = true;
+
                     break;
                 case config.KEY_DOWN:
-                    config.TURN_LEFT = false;
+                    config.JUMP = false;
                     break;
                 case config.KEY_SPACE:
                     config.FIRING = true;
                     break;
-                
-                    
+
+
             }
         }
 
@@ -63,11 +63,11 @@
 
             switch (event.keyCode) {
                 case config.KEY_UP:
-                    config.TURN_LEFT = false;
+                    config.JUMP = false;
                     // this.y -= 100;
                     break;
                 case config.KEY_DOWN:
-                    config.TURN_LEFT = false;
+                    config.JUMP = false;
                     break;
 
                 case config.KEY_SPACE:
@@ -78,9 +78,10 @@
         }
 
         private performingjump() {
-            if (config.TURN_LEFT) {
-                this.y -= 15;
-            }                  
-           }
+            if (config.JUMP) {
+                this.y -= 10;
+
+            }
+        }
     }
-}  
+}   

@@ -15,7 +15,7 @@
         }
         public update(): void {
             this.x = 10;
-            this.y = superman.y; 
+            this.y = doraemon.y; 
         }
       
     }

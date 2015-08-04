@@ -13,14 +13,14 @@
 
         public update() {
             city.update();
-            superman.update();
+            doraemon.update();
             bulletManager.update();
             ring.update();
 
             obstacle1.update();
             obstacle_down.update();
          
-           // collision.check(ring);
+            collision.check(ring);
             scoreboard.update();
             stage.update();
 
@@ -36,14 +36,12 @@
         city = new objects.City(assets.loader.getResult("Background"));
         game.addChild(city);
 
-        //add rings object to stage
-        ring = new objects.Ring(assets.loader.getResult("ring"));
-       // game.addChild(ring);
+       
 
         // add superman object to stage
      //   superman = new objects.Superman(assets.loader.getResult("superman"));
-        superman = new objects.Superman("Dom");
-        game.addChild(superman);
+        doraemon = new objects.Doraemon("Dom");
+        game.addChild(doraemon);
 
         //add colliding to the stage
         colliding = new objects.Colliding(assets.loader.getResult("colliding"));
@@ -57,6 +55,9 @@
         obstacle_down = new objects.Obstacle_down("obstacle2");
         game.addChild(obstacle_down);
 
+        //add rings object to stage
+        ring = new objects.Ring("ring");
+        game.addChild(ring);
       //  for (var ball = 0; ball < 3; ball++) {
         //    fireballs[ball] = new objects.Fireball(assets.loader.getResult("fireball"));
             //game.addChild(fireballs[ball]);

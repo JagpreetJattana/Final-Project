@@ -24,9 +24,9 @@
         }
 
 
-        private reset(): void {
+        public reset(): void {
             this.y = Math.floor(Math.random() * 390); // start ring at random location
-            this.x = 660; // start ring off stage
+            this.x = obstacle1.x+300; // start ring off stage
         }
 
 

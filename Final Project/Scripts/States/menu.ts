@@ -9,7 +9,7 @@ module states {
         //updating objects in menu state
         public update() {
             city.update();
-            superman.update();
+            doraemon.update();
             stage.update();
         }
         //method that is called when play button is clicked
@@ -34,8 +34,8 @@ module states {
 
 
             // add superman object to stage
-            superman = new objects.Superman(assets.loader.getResult("superman"));
-            game.addChild(superman);
+            doraemon = new objects.Doraemon(assets.loader.getResult("superman"));
+            game.addChild(doraemon);
 
             //adding instruction label
             menulbl = new createjs.Bitmap(assets.loader.getResult("menu"));

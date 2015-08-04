@@ -40,6 +40,7 @@
     export var REVERSE: boolean = false;
     export var TURN_LEFT: boolean = false;
     export var TURN_RIGHT: boolean = false;
+    export var JUMP: boolean = false;
     export var FIRING: boolean = false;
 
     // avatar constants

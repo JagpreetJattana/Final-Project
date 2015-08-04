@@ -85,16 +85,13 @@
     <Content Include="Scripts\constants.js" />
     <Content Include="Scripts\game.js.map" />
     <Content Include="Scripts\managers\asset.js.map" />
-    <Content Include="Scripts\managers\bullet.js" />
     <Content Include="Scripts\managers\collision.js.map" />
-    <Content Include="Scripts\objects\bullet.js" />
     <Content Include="Scripts\objects\button.js" />
     <Content Include="Scripts\objects\city.js" />
     <Content Include="Scripts\objects\colliding.js" />
     <Content Include="Scripts\objects\gameObject.js.map" />
     <Content Include="Scripts\objects\ring.js" />
     <Content Include="Scripts\objects\scoreboard.js.map" />
-    <Content Include="Scripts\objects\superman.js" />
     <Content Include="Scripts\States\gameover.js" />
     <Content Include="Scripts\States\menu.js" />
     <Content Include="Scripts\States\play.js.map" />
@@ -110,13 +107,11 @@
     <Content Include="Scripts\objects\city.js.map" />
     <Content Include="Scripts\objects\colliding.js.map" />
     <Content Include="Scripts\objects\ring.js.map" />
-    <Content Include="Scripts\objects\superman.js.map" />
     <Content Include="Scripts\States\gameover.js.map" />
     <Content Include="Scripts\States\menu.js.map" />
     <Content Include="Scripts\config\config.js.map" />
-    <Content Include="Scripts\managers\bullet.js.map" />
-    <Content Include="Scripts\objects\bullet.js.map" />
     <Content Include="assets\images\MyJason.json" />
+    <Content Include="assets\audio\star.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,19 +148,19 @@
     <TypeScriptCompile Include="Scripts\config\config.ts" />
     <TypeScriptCompile Include="Scripts\constants.ts" />
     <TypeScriptCompile Include="Scripts\game.ts" />
+    <TypeScriptCompile Include="Scripts\managers\arrow.ts" />
     <TypeScriptCompile Include="Scripts\managers\asset.ts" />
-    <TypeScriptCompile Include="Scripts\managers\bullet.ts" />
     <TypeScriptCompile Include="Scripts\managers\collision.ts" />
-    <TypeScriptCompile Include="Scripts\objects\bullet.ts" />
+    <TypeScriptCompile Include="Scripts\objects\arrow.ts" />
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
     <TypeScriptCompile Include="Scripts\objects\city.ts" />
     <TypeScriptCompile Include="Scripts\objects\colliding.ts" />
+    <TypeScriptCompile Include="Scripts\objects\doraemon.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameObject.ts" />
     <TypeScriptCompile Include="Scripts\objects\obstacle.ts" />
     <TypeScriptCompile Include="Scripts\objects\obstacle_down.ts" />
     <TypeScriptCompile Include="Scripts\objects\ring.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
-    <TypeScriptCompile Include="Scripts\objects\superman.ts" />
     <TypeScriptCompile Include="Scripts\States\gameover.ts" />
     <TypeScriptCompile Include="Scripts\States\menu.ts" />
     <TypeScriptCompile Include="Scripts\States\play.ts" />

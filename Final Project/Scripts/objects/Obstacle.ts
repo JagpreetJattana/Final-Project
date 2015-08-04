@@ -22,7 +22,8 @@
 
 
         private reset(): void {
-            this.y = 80; // start fireballs at random location
+            this.y = Math.floor(Math.random() * 142); // start fireballs at random location
+           // this.y =142;
             this.x = 660; // start fireball off stage
             
           
@@ -31,8 +32,8 @@
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
-
-            this.x-= 8; // moves fireball up and down the stage
+            
+            this.x-= 5; // moves fireball up and down the stage
              // drifts fireballs left
             this.checkBounds();
         }

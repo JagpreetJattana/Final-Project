@@ -14,11 +14,9 @@
             { id: "gameoverlbl", src: "assets/images/gameover.png" },
             { id: "playagainbutton", src: "assets/images/playagain.png" },
             { id: "startbutton", src: "assets/images/startbutton.png" },
-            { id: "obstacle1", src: "assets/images/obstacle1.png" },
-            { id: "obstacle_down", src: "assets/images/obstacle2.png" },
             { id: "ringing", src: "assets/audio/pickupcoin.wav" },
             { id: "fireballs", src: "assets/audio/destroy.wav" },
-            { id: "supermansound", src: "assets/audio/supermansound.ogg" },
+            { id: "supermansound", src: "assets/audio/star.ogg" },
             { id: "colliding", src: "assets/images/colliding.png" },
             { id: "bullet", src: "assets/images/bullet.png" },
         ];
@@ -29,29 +27,99 @@
                 "assets/images/MyJason.png"
             ],
 
-            "frames": [
-                [2, 2, 54, 65, 0, 0, 0],
-                [2, 69, 48, 300, 0, 0, 0],
-                [2, 371, 48, 300, 0, 0, 0],
-                [2, 673, 35, 44, 0, 0, 0],
-                [39, 673, 6, 6, 0, 0, 0],
-                [2, 719, 35, 44, 0, 0, 0],
-                [2, 765, 35, 44, 0, 0, 0],
-                [2, 811, 35, 44, 0, 0, 0]
+            "frames": [[2, 2, 45, 295, 0, -1, -5],
+                [49, 2, 45, 294, 0, -1, 0],
+                [2, 299, 87, 48, 0, 0, -16],
+                [96, 2, 78, 81, 0, 0, -2],
+                [96, 85, 58, 87, 0, -4, -3],
+                [176, 2, 86, 56, 0, 0, -6],
+                [264, 2, 81, 52, 0, -4, -6],
+                [96, 174, 60, 65, 0, 0, 0],
+                [96, 241, 73, 59, 0, 0, -2],
+                [91, 302, 35, 45, 0, -3, -1],
+                [176, 60, 73, 50, 0, 0, -14],
+                [156, 112, 60, 54, 0, 0, -10],
+                [158, 168, 71, 64, 0, 0, 0],
+                [171, 234, 55, 65, 0, -2, 0],
+                [128, 302, 72, 41, 0, -1, -23],
+                [202, 301, 40, 46, 0, 0, -1],
+                [218, 112, 51, 47, 0, 0, 0],
+                [231, 161, 31, 63, 0, -12, -2],
+                [264, 56, 71, 21, 0, -1, -8],
+                [251, 79, 68, 23, 0, -1, -41],
+                [271, 104, 46, 40, 0, 0, -4],
+                [319, 104, 28, 35, 0, -1, -6],
+                [319, 141, 28, 35, 0, -1, -6],
+                [271, 146, 38, 40, 0, -3, -4],
+                [264, 188, 60, 37, 0, -1, 0],
+                [228, 234, 24, 38, 0, -6, -3],
+                [254, 227, 30, 38, 0, -3, -5],
+                [286, 227, 28, 35, 0, -1, -6],
+                [316, 227, 24, 38, 0, -8, -3],
+                [254, 267, 38, 10, 0, -2, -2],
+                [244, 279, 28, 35, 0, -1, -6],
+                [244, 316, 28, 30, 0, -4, -6],
+                [274, 279, 24, 38, 0, -6, -3],
+                [274, 319, 26, 28, 0, -5, -8],
+                [228, 274, 14, 14, 0, -1, 0],
+                [300, 267, 24, 38, 0, -8, -3],
+                [302, 307, 28, 29, 0, -4, -7],
+                [156, 85, 13, 14, 0, -1, 0],
+                [321, 79, 13, 12, 0, -1, 0],
+                [326, 267, 13, 11, 0, -1, 0]
             ],
 
-            "animations": {
-                "ring": [0],
-                "obstacle1": [1],
-                "obstacle2": [2],
-                
-                "bullet": [4],
-               
+            "animations": {         
+                            
+                       
 
+                          
+   
+
+                "obstacle1": [0],
+                "obstacle2": [1],
+                "FinalMonster": [2],
+                "FinalMonster5": [3],
+                "FinalMonster2": [4],
+                "FinalMonster1": [5],
+                "FinalMonster4": [6],
+                "FinalMonsterDieing1": [7],
+                "FinalMonster3": [8],
+                "melon2": [9],
+                "FinalMonsterDieing3": [10],
+                "FinalMonsterDieing2": [11],
+                "FinalMonsterDieing5": [12],
+                "FinalMonsterDieing": [13],
+                "FinalMonsterDieing4": [14],
+                "melon": [15],
+                "melon4": [16],
+                "ring": [17],
+                "melon7": [18],
+                "FinalMonsterDieing6": [19],
+                "melon5": [20],
+               
+               
+                "melon3": [23],
+                "melon6": [24],
+                
+                "Iron_Bow": [26],
+                "DomArrow": [27],
                 "Dom": {
-                    frames: [3, 5, 6, 7],
+                    frames: [21, 22, 25, 28],
                     speed: 0.5
-                }
+                },  
+               
+                "Arrow": [29],
+                "DomArrow1": [30],
+                "Dora_die": [31],
+                "DomArrow2": [32],
+                "Dora_die3": [33],
+                "Fireball3": [34],
+                "DomArrow3": [35],
+                "Dora_die2": [36],
+                "Fireball1": [37],
+                "Fireball2": [38],
+                "Fireball": [39]
                 
             },
 

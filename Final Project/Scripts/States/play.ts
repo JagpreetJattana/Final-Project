@@ -14,13 +14,16 @@
         public update() {
             city.update();
             doraemon.update();
-            bulletManager.update();
+            arrowManager.update();
             ring.update();
+            
 
             obstacle1.update();
             obstacle_down.update();
          
             collision.check(ring);
+            collision.check(obstacle1);
+            collision.check(obstacle_down);
             scoreboard.update();
             stage.update();
 
@@ -58,6 +61,8 @@
         //add rings object to stage
         ring = new objects.Ring("ring");
         game.addChild(ring);
+
+      
       //  for (var ball = 0; ball < 3; ball++) {
         //    fireballs[ball] = new objects.Fireball(assets.loader.getResult("fireball"));
             //game.addChild(fireballs[ball]);
@@ -66,6 +71,7 @@
         scoreboard = new objects.ScoreBoard();
         //add collision manager
         collision = new managers.Collision();
+        collision_other = new managers.Collision_other();
         stage.addChild(game);
 
     }

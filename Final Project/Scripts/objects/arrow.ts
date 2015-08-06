@@ -5,7 +5,8 @@
         constructor() {
             super("Arrow");
             this.init();
-            game.addChild(this);
+            this.name = "Arrow";
+           // game.addChild(this);
         }
 
         // PUBLIC METHODS
@@ -18,7 +19,7 @@
         }
 
         update() {
-            this.x += 10;
+            this.x += 8;
            
         }
     }

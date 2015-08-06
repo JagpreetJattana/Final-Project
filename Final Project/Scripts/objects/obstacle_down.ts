@@ -5,7 +5,7 @@
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
         constructor(imageString: string) {
             super(imageString);
-            this.name = "obastacle_down";
+            this.name = "obstacle_down";
 
             this.soundString = "fireballs";
             this.reset();
@@ -32,7 +32,7 @@
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
 
-            this.x -= 5; // moves fireball up and down the stage
+            this.x -= 3; // moves fireball up and down the stage
             // drifts fireballs left
             this.checkBounds();
         }

@@ -21,6 +21,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TypeScriptToolsVersion>1.5</TypeScriptToolsVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,6 +63,7 @@
   <ItemGroup>
     <Content Include="assets\audio\destroy.wav" />
     <Content Include="assets\audio\pickupcoin.wav" />
+    <Content Include="assets\images\Arrow.png" />
     <Content Include="assets\images\Background.png" />
     <Content Include="assets\images\Background2.png" />
     <Content Include="assets\images\bullet.png" />
@@ -68,6 +71,7 @@
     <Content Include="assets\images\colliding.png" />
     <Content Include="assets\images\enemy.png" />
     <Content Include="assets\images\gameover.png" />
+    <Content Include="assets\images\Iron_Bow.png" />
     <Content Include="assets\images\island.png" />
     <Content Include="assets\images\mainbackground.png" />
     <Content Include="assets\images\menu.png" />
@@ -151,12 +155,15 @@
     <TypeScriptCompile Include="Scripts\managers\arrow.ts" />
     <TypeScriptCompile Include="Scripts\managers\asset.ts" />
     <TypeScriptCompile Include="Scripts\managers\collision.ts" />
+    <TypeScriptCompile Include="Scripts\managers\collisionother.ts" />
     <TypeScriptCompile Include="Scripts\objects\arrow.ts" />
+    <TypeScriptCompile Include="Scripts\objects\bow.ts" />
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
     <TypeScriptCompile Include="Scripts\objects\city.ts" />
     <TypeScriptCompile Include="Scripts\objects\colliding.ts" />
     <TypeScriptCompile Include="Scripts\objects\doraemon.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameObject.ts" />
+    <TypeScriptCompile Include="Scripts\objects\mellon.ts" />
     <TypeScriptCompile Include="Scripts\objects\obstacle.ts" />
     <TypeScriptCompile Include="Scripts\objects\obstacle_down.ts" />
     <TypeScriptCompile Include="Scripts\objects\ring.ts" />
@@ -164,6 +171,8 @@
     <TypeScriptCompile Include="Scripts\States\gameover.ts" />
     <TypeScriptCompile Include="Scripts\States\menu.ts" />
     <TypeScriptCompile Include="Scripts\States\play.ts" />
+    <TypeScriptCompile Include="Scripts\States\play_level_three.ts" />
+    <TypeScriptCompile Include="Scripts\States\play_level_two.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\preloadjs\preloadjs.d.ts" />
@@ -198,6 +207,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

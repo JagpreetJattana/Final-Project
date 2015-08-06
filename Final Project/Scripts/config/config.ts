@@ -42,6 +42,10 @@
     export var TURN_RIGHT: boolean = false;
     export var JUMP: boolean = false;
     export var FIRING: boolean = false;
+    export var RINGSTRIKE: boolean = false;
+    export var HAVING_BOW: boolean = false;
+    export var PLAY_MELLON_ANIMATION: boolean = false;
+    export var MELLON_IS_THERE: boolean = true;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;

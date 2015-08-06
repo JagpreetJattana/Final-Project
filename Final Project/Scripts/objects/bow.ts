@@ -1,13 +1,13 @@
 ﻿module objects {
-    // fireball Class ++++++++++++++++++++++++++++++++++++++
-    export class Obstacle extends objects.GameObject {
+    //Bow Class ++++++++++++++++++++++++++++++++++++++
+    export class Bow extends objects.GameObject {
        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
         constructor(imageString: string) {
             super(imageString);
-            this.name = "obstacle1";
-            
-            this.soundString = "fireballs";
+            this.name = "Bow";
+
+          //  this.soundString = "bow";
             this.reset();
         }
 
@@ -15,17 +15,17 @@
         private checkBounds(): void {
 
             // check if fireball has left screen
-            if (this.x < 0) {
-                config.RINGSTRIKE = false;
+            if (this.x < -2000) {
+                
                 this.reset();
             }
         }
 
 
         private reset(): void {
-            this.y = Math.floor(Math.random() * 142); // start fireballs at random location
-           // this.y =142;
-            this.x = 660; // start fireball off stage
+            this.y = Math.floor(Math.random() * 390); // start bow at random location
+           // this.y = 100;
+            this.x = 860; // start bow off stage
             
           
         }
@@ -33,10 +33,12 @@
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
-            
-            this.x-= 3; // moves fireball up and down the stage
-             // drifts fireballs left
+
+            this.x -= 5; // moves bow from left to right
             this.checkBounds();
+            if (config.HAVING_BOW) {
+                game.removeChild(iron_bow);
+            }
         }
     }
-}   
+}    

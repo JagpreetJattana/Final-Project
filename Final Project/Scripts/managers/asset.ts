@@ -22,7 +22,7 @@
         ];
         //constructor
 
-        private data = {
+        public data = {
             "images": [
                 "assets/images/MyJason.png"
             ],
@@ -69,12 +69,7 @@
                 [326, 267, 13, 11, 0, -1, 0]
             ],
 
-            "animations": {         
-                            
-                       
-
-                          
-   
+            "animations": {
 
                 "obstacle1": [0],
                 "obstacle2": [1],
@@ -97,18 +92,18 @@
                 "melon7": [18],
                 "FinalMonsterDieing6": [19],
                 "melon5": [20],
-               
-               
+
+
                 "melon3": [23],
                 "melon6": [24],
-                
+
                 "Iron_Bow": [26],
                 "DomArrow": [27],
                 "Dom": {
                     frames: [21, 22, 25, 28],
                     speed: 0.5
-                },  
-               
+                },
+
                 "Arrow": [29],
                 "DomArrow1": [30],
                 "Dora_die": [31],
@@ -120,7 +115,6 @@
                 "Fireball1": [37],
                 "Fireball2": [38],
                 "Fireball": [39]
-                
             },
 
 

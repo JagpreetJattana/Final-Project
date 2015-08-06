@@ -6,9 +6,11 @@
 
 /// <reference path="config/config.ts" />
 /// <reference path="managers/arrow.ts" />
-
-/// <reference path="utility/utility.ts" />
+/// <reference path="managers/collisionother.ts" />
+/// <reference path="managers/collision.ts" />
 /// <reference path="managers/asset.ts" />
+/// <reference path="utility/utility.ts" />
+
 
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/city.ts" />
@@ -16,16 +18,24 @@
 
 /// <reference path="objects/arrow.ts" />
 /// <reference path="objects/ring.ts" />
+/// <reference path="objects/bow.ts" />
+/// <reference path="objects/mellon.ts" />
+
+
 
 /// <reference path="objects/obstacle.ts" />
 /// <reference path="objects/obstacle_down.ts" />
 
 /// <reference path="objects/scoreboard.ts" />
-/// <reference path="managers/collision.ts" />
+
+
 /// <reference path="objects/colliding.ts" />
 /// <reference path="constants.ts" />
-
 /// <reference path="states/play.ts" />
+/// <reference path="states/play_level_two.ts" />
+/// <reference path="states/play_level_three.ts" />
+
+
 /// <reference path="objects/button.ts" />
 
 /// <reference path="states/menu.ts" />
@@ -37,6 +47,7 @@
 var canvas = document.getElementById("canvas");
 var stage: createjs.Stage;
 var stats: Stats;
+
 var game: createjs.Container;
 var game: createjs.Container;
 
@@ -50,6 +61,10 @@ var game: createjs.Container;
 var city: objects.City;
 var colliding: objects.Colliding;
 var doraemon: objects.Doraemon;
+var arrow: objects.Arrow;
+var doraemonArrow: objects.Doraemon;
+var iron_bow: objects.Bow;
+var watermellon: objects.WaterMellon;
 var menulbl: createjs.Bitmap;
 var gameoverlbl: createjs.Bitmap;
 var ring: objects.Ring;
@@ -59,12 +74,16 @@ var obstacle_down: objects.Obstacle_down;
 var scoreboard: objects.ScoreBoard;
 var play: states.Play;
 var menu: states.Menu;
+var play_level_two: states.Play_Level_Two;
+var play_level_three: states.Play_Level_Three;
+
 var gameover: states.Gameover;
 var currentstate;
 //Game managers
 var assets: managers.Assets;
-var bulletManager: managers.ArrowManager;
+var arrowManager: managers.ArrowManager;
 var collision: managers.Collision;
+var collision_other: managers.Collision_other;
 
 //game buttons
 var startbutton: objects.Button;
@@ -74,7 +93,7 @@ var playagainbutton: objects.Button;
 // Preloader Function
 function preload() {
     assets = new managers.Assets();
-    bulletManager = new managers.ArrowManager();
+    arrowManager = new managers.ArrowManager();
    
     //Setup statistics object
     setupStats();
@@ -129,11 +148,14 @@ function optimizeForMobile() {
 
 // Our Main Game Function
 function main() {
+  
  
     menu = new states.Menu();
     //currentstate = menu;
-    play = new states.Play();
-    currentstate = play;
+  // play = new states.Play();
+    //currentstate = play;
+    play_level_two = new states.Play_Level_Two();
+    currentstate = play_level_two;
 
 }
 
@@ -150,13 +172,38 @@ function changeState(state: number): void {
             // instantiate play screen
             play = new states.Play();
             currentstate = play;
+         //   play_level_two = new states.Play_Level_Two();
+       //     currentstate = play_level_two;
+
+            break;
+
+        case constants.PLAY_LEVEL_TWO:
+            // instantiate play screen
+            play_level_two = new states.Play_Level_Two();
+            currentstate = play_level_two;
+          //  play = new states.Play();
+           // currentstate = play;
+           // play_level_two = new states.Play_Level_Two();
+            //currentstate = play_level_two;
+
+            break;
+
+        case constants.PLAY_LEVEL_THREE:
+            // instantiate play screen
+          //  play_level_three = new states.Play_Level_Three();
+          //  currentstate = play_level_three;
+            //play = new states.Play();
+            play_level_two = new states.Play_Level_Two();
+            currentstate = play_level_two;
 
             break;
 
         case constants.GAME_OVER_STATE:
             gameover = new states.Gameover();
-           // currentstate = gameover;
-            currentstate = play;
+            //currentstate = gameover;
+            //currentstate = play;
+            play_level_two = new states.Play_Level_Two();
+            currentstate = play_level_two;
             break;
     }
 }

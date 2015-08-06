@@ -19,40 +19,35 @@
         p2.x = gameObject.x;
         p2.y = gameObject.y;
 
-        if (utility.distance(p1, p2) < ((doraemon.height * 0.5 + gameObject.height * 0.5))) {
+        if (utility.distance(p1, p2) < ((doraemon.width * 0.5 + gameObject.width * 0.5))) {
             if (gameObject.isColliding == false) {
                 console.log("collision");
                 createjs.Sound.play(gameObject.soundString);
-                if (gameObject.name == "fireball") {
+                if ((gameObject.name == "obstacle1") || (gameObject.name =="obstacle_down")) {
                     scoreboard.lives--;
                     //here is what makes game over
-                    if (scoreboard.lives < 0) {
-                        stage.removeChild(game);
-                        stage.removeAllChildren();
-                        game.removeAllChildren();
-                        game.removeChild(doraemon);
-                        game.removeAllEventListeners();
-
-                        changeState(constants.GAME_OVER_STATE);
-
-
-                    }
-                    if (flag == 0) {
-                        game.removeChild(doraemon);
-                        colliding.update();
-                        game.addChild(colliding);
-                        flag = 1;
-                    }
-                    window.setTimeout(function () {
-                        game.removeChild(colliding);
-                        game.addChild(doraemon);
+                     window.setTimeout(function () {
+                      game.removeChild(colliding);
+                       game.addChild(doraemon);
                         flag = 0;
                     }, 1400);
                 }
                 if (gameObject.name == "ring") {
                     scoreboard.score += 100;
-                   // ring.reset();                   
+                    if (scoreboard.score > 2000) {
+                      //  changeState(constants.PLAY_LEVEL_TWO);
+                    }
+                    config.RINGSTRIKE = true;
+                    ring.reset();                   
                     
+                }
+               else if (gameObject.name == "Bow") {
+                    //to show that player has succesfully got the bow
+                    //game.removeChild(doraemon);
+                    //game.addChild(doraemonArrow);
+                   // doraemon = new objects.Doraemon("DomArrow");
+                    config.HAVING_BOW = true;
+                    game.removeChild(iron_bow);
                 }
             }
             gameObject.isColliding = true;

@@ -8,7 +8,8 @@
             super(imageString);
             window.onkeydown = this.jump;
             window.onkeyup = this.jumpdown;
-
+            this.name = "doraemon";
+            config.HAVING_BOW = true;
 
 
             this.dy = 5;

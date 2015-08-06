@@ -25,8 +25,16 @@
 
 
         public reset(): void {
-            this.y = Math.floor(Math.random() * 390); // start ring at random location
-            this.x = obstacle1.x+300; // start ring off stage
+           
+            if (!config.RINGSTRIKE) {
+                this.y = Math.floor(Math.random() * 390); // start ring at random location
+                this.x = obstacle1.x + 300;
+            } else {
+
+                this.x = 1000;
+                this.y = 10;
+
+           }// start ring off stage
         }
 
 

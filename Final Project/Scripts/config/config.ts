@@ -46,6 +46,10 @@
     export var HAVING_BOW: boolean = false;
     export var PLAY_MELLON_ANIMATION: boolean = false;
     export var MELLON_IS_THERE: boolean = true;
+    export var ARROW_FIRED: boolean = false;
+    export var MOVE_UP: boolean = false;
+    export var MOVE_DOWN: boolean = false;
+    export var FIRING_FIREBALL: boolean = false;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;

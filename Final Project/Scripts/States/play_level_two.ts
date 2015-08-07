@@ -22,7 +22,9 @@
             obstacle1.update();
             obstacle_down.update();
            // collision.check(iron_bow);
-           // collision_other.check(watermellon,arrow);
+          //  if (config.ARROW_FIRED) {
+               // collision_other.check(watermellon, arrow);
+         //   }
             watermellon.update();
 
             collision.check(ring);

@@ -73,13 +73,16 @@
 
                 "obstacle1": [0],
                 "obstacle2": [1],
-                "FinalMonster": [2],
-                "FinalMonster5": [3],
-                "FinalMonster2": [4],
-                "FinalMonster1": [5],
-                "FinalMonster4": [6],
+                "FinalMonster": {
+                    frames: [2, 5, 4, 8, 6, 3],
+                    speed:0.1
+                },
+              
+                
+               
+               
                 "FinalMonsterDieing1": [7],
-                "FinalMonster3": [8],
+               
                 "melon2": [9],
                 "FinalMonsterDieing3": [10],
                 "FinalMonsterDieing2": [11],
@@ -109,12 +112,14 @@
                 "Dora_die": [31],
                 "DomArrow2": [32],
                 "Dora_die3": [33],
-                "Fireball3": [34],
+               
                 "DomArrow3": [35],
                 "Dora_die2": [36],
-                "Fireball1": [37],
-                "Fireball2": [38],
-                "Fireball": [39]
+                
+                "Fireball": {
+                    frames: [39, 37, 38, 34],
+                    speed:0.3
+                }
             },
 
 

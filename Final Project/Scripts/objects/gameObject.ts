@@ -19,6 +19,7 @@
             this.height = this.getBounds().height;
             this.regX = this.width * 0.5;
             this.regY = this.height * 0.5;
+           
 
         
         }

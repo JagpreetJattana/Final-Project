@@ -10,11 +10,9 @@
         }
 
         // PUBLIC METHODS
-        public init() {
-            
-           
-          
-            this.x = doraemon.x;
+        public init() {          
+                   
+           this.x = doraemon.x;
            this.y = doraemon.y;
         }
 

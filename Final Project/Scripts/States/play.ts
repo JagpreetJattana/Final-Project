@@ -14,7 +14,7 @@
         public update() {
             city.update();
             doraemon.update();
-            arrowManager.update();
+           // arrowManager.update();
             ring.update();
             
 

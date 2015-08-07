@@ -156,12 +156,15 @@
     <TypeScriptCompile Include="Scripts\managers\asset.ts" />
     <TypeScriptCompile Include="Scripts\managers\collision.ts" />
     <TypeScriptCompile Include="Scripts\managers\collisionother.ts" />
+    <TypeScriptCompile Include="Scripts\managers\fireballManager.ts" />
     <TypeScriptCompile Include="Scripts\objects\arrow.ts" />
     <TypeScriptCompile Include="Scripts\objects\bow.ts" />
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
     <TypeScriptCompile Include="Scripts\objects\city.ts" />
     <TypeScriptCompile Include="Scripts\objects\colliding.ts" />
     <TypeScriptCompile Include="Scripts\objects\doraemon.ts" />
+    <TypeScriptCompile Include="Scripts\objects\finalMonster.ts" />
+    <TypeScriptCompile Include="Scripts\objects\fireball.ts" />
     <TypeScriptCompile Include="Scripts\objects\gameObject.ts" />
     <TypeScriptCompile Include="Scripts\objects\mellon.ts" />
     <TypeScriptCompile Include="Scripts\objects\obstacle.ts" />

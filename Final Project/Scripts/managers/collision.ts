@@ -25,12 +25,7 @@
                 createjs.Sound.play(gameObject.soundString);
                 if ((gameObject.name == "obstacle1") || (gameObject.name =="obstacle_down")) {
                     scoreboard.lives--;
-                    //here is what makes game over
-                     window.setTimeout(function () {
-                      game.removeChild(colliding);
-                       game.addChild(doraemon);
-                        flag = 0;
-                    }, 1400);
+                  
                 }
                 if (gameObject.name == "ring") {
                     scoreboard.score += 100;

@@ -23,14 +23,14 @@
                 if (gameObject.isColliding == false) {
                     console.log("collisionother");
                     if ((gameObject.name == "watermellon") && (gameObject2.name == "Arrow")) {
-                        watermellon.gotoAndPlay("melondie");
+                      //  watermellon.gotoAndPlay("melondie");
                         //game.removeChild(arrow);
 
                         window.setTimeout(function () {
                             game.removeChild(watermellon);
                             config.MELLON_IS_THERE = false;
-                            watermellon.gotoAndStop("melondie");
-                            watermellon.gotoAndPlay("melon");
+                         //   watermellon.gotoAndStop("melondie");
+                         //   watermellon.gotoAndPlay("melon");
                         }, 450);
 
                         

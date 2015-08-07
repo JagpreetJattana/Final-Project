@@ -9,12 +9,16 @@
 /// <reference path="managers/collisionother.ts" />
 /// <reference path="managers/collision.ts" />
 /// <reference path="managers/asset.ts" />
+/// <reference path="managers/fireballmanager.ts" />
+
 /// <reference path="utility/utility.ts" />
 
 
 /// <reference path="objects/gameobject.ts" />
 /// <reference path="objects/city.ts" />
 /// <reference path="objects/doraemon.ts" />
+/// <reference path="objects/fireball.ts" />
+/// <reference path="objects/finalmonster.ts" />
 
 /// <reference path="objects/arrow.ts" />
 /// <reference path="objects/ring.ts" />
@@ -61,7 +65,9 @@ var game: createjs.Container;
 var city: objects.City;
 var colliding: objects.Colliding;
 var doraemon: objects.Doraemon;
+var finalMonster: objects.FinalMonster;
 var arrow: objects.Arrow;
+var fireball: objects.Fireball;
 var doraemonArrow: objects.Doraemon;
 var iron_bow: objects.Bow;
 var watermellon: objects.WaterMellon;
@@ -82,6 +88,7 @@ var currentstate;
 //Game managers
 var assets: managers.Assets;
 var arrowManager: managers.ArrowManager;
+var fireballManager: managers.FireballManager;
 var collision: managers.Collision;
 var collision_other: managers.Collision_other;
 
@@ -94,6 +101,7 @@ var playagainbutton: objects.Button;
 function preload() {
     assets = new managers.Assets();
     arrowManager = new managers.ArrowManager();
+    fireballManager = new managers.FireballManager();
    
     //Setup statistics object
     setupStats();
@@ -153,9 +161,11 @@ function main() {
     menu = new states.Menu();
     //currentstate = menu;
   // play = new states.Play();
-    //currentstate = play;
-    play_level_two = new states.Play_Level_Two();
-    currentstate = play_level_two;
+  //  currentstate = play;
+   // play_level_two = new states.Play_Level_Two();
+   // currentstate = play_level_two;
+    play_level_three = new states.Play_Level_Three();
+    currentstate = play_level_three;
 
 }
 
@@ -165,22 +175,25 @@ function changeState(state: number): void {
         case constants.MENU_STATE:
             // instantiate menu screen
            // currentstate = menu;
-            currentstate = play;
+            //currentstate = play;
+           // currentstate = play_level_two;
+
+
             break;
 
         case constants.PLAY_STATE:
             // instantiate play screen
-            play = new states.Play();
-            currentstate = play;
+           // play = new states.Play();
+           // currentstate = play;
          //   play_level_two = new states.Play_Level_Two();
-       //     currentstate = play_level_two;
+           // currentstate = play_level_two;
 
             break;
 
         case constants.PLAY_LEVEL_TWO:
             // instantiate play screen
-            play_level_two = new states.Play_Level_Two();
-            currentstate = play_level_two;
+         //   play_level_two = new states.Play_Level_Two();
+         //   currentstate = play_level_two;
           //  play = new states.Play();
            // currentstate = play;
            // play_level_two = new states.Play_Level_Two();
@@ -193,8 +206,8 @@ function changeState(state: number): void {
           //  play_level_three = new states.Play_Level_Three();
           //  currentstate = play_level_three;
             //play = new states.Play();
-            play_level_two = new states.Play_Level_Two();
-            currentstate = play_level_two;
+          //  play_level_two = new states.Play_Level_Two();
+          //  currentstate = play_level_two;
 
             break;
 
@@ -202,8 +215,8 @@ function changeState(state: number): void {
             gameover = new states.Gameover();
             //currentstate = gameover;
             //currentstate = play;
-            play_level_two = new states.Play_Level_Two();
-            currentstate = play_level_two;
+           // play_level_two = new states.Play_Level_Two();
+           // currentstate = play_level_two;
             break;
     }
 }

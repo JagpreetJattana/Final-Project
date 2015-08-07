@@ -18,7 +18,9 @@
             arrow = new objects.Arrow();
 
             game.addChild(arrow);
+
             arrow.init();
+            config.ARROW_FIRED = true;
             this._arrows.push(arrow);
             
 
@@ -35,7 +37,9 @@
                 if (this._arrows[count] == arrow) {
                     this._arrows.splice(count, 1);
                     game.removeChild(arrow);
+                   
                 }
+                config.ARROW_FIRED = false;
             }
         } // end destroyArrow
 
@@ -73,6 +77,7 @@
                 arrow = this._arrows[count];
                 // move current arrow up stage
                 arrow.update();
+                collision_other.check(watermellon, arrow);
 
                 this._checkBounds(arrow);
             } 

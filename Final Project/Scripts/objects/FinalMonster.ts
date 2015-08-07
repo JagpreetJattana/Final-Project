@@ -10,7 +10,7 @@
             this.y = 600;
             this.scaleX = -1;
             config.MOVE_UP = true;
-            config.FIRING_FIREBALL = true;
+          
             //  this.soundString = "bow";
            // this.reset();
         }

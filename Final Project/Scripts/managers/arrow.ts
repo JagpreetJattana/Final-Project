@@ -77,7 +77,12 @@
                 arrow = this._arrows[count];
                 // move current arrow up stage
                 arrow.update();
-                collision_other.check(watermellon, arrow);
+                if (config.ACTIVE_STATE == constants.PLAY_LEVEL_TWO){
+                    collision_other.check(watermellon, arrow);
+                }
+               else if (config.ACTIVE_STATE == constants.PLAY_LEVEL_THREE){
+                    collision_other.check(final_Monster, arrow);
+                }
 
                 this._checkBounds(arrow);
             } 

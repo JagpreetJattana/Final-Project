@@ -65,7 +65,7 @@ var game: createjs.Container;
 var city: objects.City;
 var colliding: objects.Colliding;
 var doraemon: objects.Doraemon;
-var finalMonster: objects.FinalMonster;
+var final_Monster: objects.FinalMonster;
 var arrow: objects.Arrow;
 var fireball: objects.Fireball;
 var doraemonArrow: objects.Doraemon;
@@ -160,12 +160,16 @@ function main() {
  
     menu = new states.Menu();
     //currentstate = menu;
-  // play = new states.Play();
+ 
+    config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
+   // config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
+     // play = new states.Play();
   //  currentstate = play;
-   // play_level_two = new states.Play_Level_Two();
-   // currentstate = play_level_two;
+  //  play_level_two = new states.Play_Level_Two();
+  // currentstate = play_level_two;
     play_level_three = new states.Play_Level_Three();
     currentstate = play_level_three;
+    
 
 }
 

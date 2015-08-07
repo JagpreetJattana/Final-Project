@@ -16,7 +16,12 @@
             this.y = 0;
 
             this.soundString = "supermansound";
-            this.x = 300;
+            if (config.ACTIVE_STATE == constants.PLAY_LEVEL_THREE) {
+                this.x = 100;
+            }
+            else {
+                this.x = 300;
+            }
             createjs.Sound.stop();
             createjs.Sound.play(this.soundString, { "loop": -1 });
 

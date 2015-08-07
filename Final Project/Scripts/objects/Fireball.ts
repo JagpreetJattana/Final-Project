@@ -12,8 +12,8 @@
         // PUBLIC METHODS
         public init() {
 
-            this.x = finalMonster.x;
-            this.y = finalMonster.y;
+            this.x = final_Monster.x;
+            this.y = final_Monster.y;
         }
 
         update() {

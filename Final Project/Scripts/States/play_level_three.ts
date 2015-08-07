@@ -13,10 +13,19 @@
 
         public update() {
             city.update();
-            doraemon.update();
-            arrowManager.update();
-            finalMonster.update();
             fireballManager.update();
+            doraemon.update();
+            final_Monster.update();
+            arrowManager.update();
+            config.FRAME_COUNTER += 1;
+            if (config.FRAME_COUNTER == 300) {
+                config.FIRING_FIREBALL = true;
+            }
+            else if (config.FRAME_COUNTER == 360) {
+                config.FRAME_COUNTER = 0;
+                config.FIRING_FIREBALL = false;
+            }
+          
            
             scoreboard.update();
             stage.update();
@@ -43,13 +52,14 @@
             //add colliding to the stage
             colliding = new objects.Colliding(assets.loader.getResult("colliding"));
 
-            finalMonster = new objects.FinalMonster("FinalMonster");
-            game.addChild(finalMonster);
+            final_Monster = new objects.FinalMonster("FinalMonster");
+            game.addChild(final_Monster);
           
             //add scoreboard
             scoreboard = new objects.ScoreBoard();
             //add collision manager
             collision = new managers.Collision();
+            collision_other = new managers.Collision_other();
             stage.addChild(game);
 
         }

@@ -38,9 +38,20 @@
                         console.log("collision in mellon");
                         
                     }
+                    if ((gameObject.name == "FinalMonster") && (gameObject2.name == "Arrow")) {
+                        scoreboard.mpower -= 2;
+
+                    }
+                    if ((gameObject.name == "doraemon") && (gameObject2.name == "Fireball")) {
+                        scoreboard.dpower -= 2;
+
+                    }
+
+                   
                    
                 }
                 gameObject.isColliding = true;
+                
             }
             else {
                 gameObject.isColliding = false;

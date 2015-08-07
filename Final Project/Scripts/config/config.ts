@@ -50,6 +50,8 @@
     export var MOVE_UP: boolean = false;
     export var MOVE_DOWN: boolean = false;
     export var FIRING_FIREBALL: boolean = false;
+    export var ACTIVE_STATE: number = 99;
+    export var FRAME_COUNTER: number = 0;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;

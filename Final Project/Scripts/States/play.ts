@@ -12,19 +12,21 @@
         //method updating playing state objects
 
         public update() {
-            city.update();
-            doraemon.update();
-           // arrowManager.update();
-            ring.update();
-            
-
-            obstacle1.update();
-            obstacle_down.update();
          
-            collision.check(ring);
-            collision.check(obstacle1);
-            collision.check(obstacle_down);
-            scoreboard.update();
+            doraemon.update();
+            if (!config.DORAEMON_DIEING) {
+                city.update();
+                // arrowManager.update();
+                ring.update();
+
+
+                obstacle1.update();
+                obstacle_down.update();
+
+                collision.check(ring);
+                collision.check_obstacle();
+                scoreboard.update();
+            }
             stage.update();
 
         }
@@ -46,9 +48,7 @@
         doraemon = new objects.Doraemon("Dom");
         game.addChild(doraemon);
 
-        //add colliding to the stage
-        colliding = new objects.Colliding(assets.loader.getResult("colliding"));
-
+      
         // add 3 fireballs objects to stage
         //obstacle1 = new objects.Obstacle(assets.loader.getResult("obstacle1"));
         obstacle1 = new objects.Obstacle("obstacle1");

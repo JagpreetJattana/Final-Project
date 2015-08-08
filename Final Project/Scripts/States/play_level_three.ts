@@ -18,7 +18,7 @@
             final_Monster.update();
             arrowManager.update();
             config.FRAME_COUNTER += 1;
-            if (config.FRAME_COUNTER == 300) {
+            if ((config.FRAME_COUNTER == 300)&&(config.MONSTER_IS_THERE)) {
                 config.FIRING_FIREBALL = true;
             }
             else if (config.FRAME_COUNTER == 360) {
@@ -49,8 +49,7 @@
             doraemon = new objects.Doraemon("Dom");
             game.addChild(doraemon);
 
-            //add colliding to the stage
-            colliding = new objects.Colliding(assets.loader.getResult("colliding"));
+           
 
             final_Monster = new objects.FinalMonster("FinalMonster");
             game.addChild(final_Monster);

@@ -33,7 +33,7 @@
 /// <reference path="objects/scoreboard.ts" />
 
 
-/// <reference path="objects/colliding.ts" />
+
 /// <reference path="constants.ts" />
 /// <reference path="states/play.ts" />
 /// <reference path="states/play_level_two.ts" />
@@ -63,7 +63,7 @@ var game: createjs.Container;
 
 // Game Variables
 var city: objects.City;
-var colliding: objects.Colliding;
+
 var doraemon: objects.Doraemon;
 var final_Monster: objects.FinalMonster;
 var arrow: objects.Arrow;
@@ -95,6 +95,16 @@ var collision_other: managers.Collision_other;
 //game buttons
 var startbutton: objects.Button;
 var playagainbutton: objects.Button;
+
+var playButton: objects.Button;
+var instructionsButton: objects.Button;
+var levelsButton: objects.Button;
+var exitButton: objects.Button;
+var level1Button: objects.Button;
+var level2Button: objects.Button;
+var level3Button: objects.Button;
+
+
 
 
 // Preloader Function
@@ -161,14 +171,14 @@ function main() {
     menu = new states.Menu();
     //currentstate = menu;
  
-    config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
-   // config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
+   // config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
+  //  config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
      // play = new states.Play();
   //  currentstate = play;
-  //  play_level_two = new states.Play_Level_Two();
-  // currentstate = play_level_two;
-    play_level_three = new states.Play_Level_Three();
-    currentstate = play_level_three;
+  // play_level_two = new states.Play_Level_Two();
+   currentstate = menu;
+   // play_level_three = new states.Play_Level_Three();
+   // currentstate = play_level_three;
     
 
 }
@@ -187,8 +197,8 @@ function changeState(state: number): void {
 
         case constants.PLAY_STATE:
             // instantiate play screen
-           // play = new states.Play();
-           // currentstate = play;
+            play = new states.Play();
+            currentstate = play;
          //   play_level_two = new states.Play_Level_Two();
            // currentstate = play_level_two;
 
@@ -196,8 +206,9 @@ function changeState(state: number): void {
 
         case constants.PLAY_LEVEL_TWO:
             // instantiate play screen
-         //   play_level_two = new states.Play_Level_Two();
-         //   currentstate = play_level_two;
+            config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
+            play_level_two = new states.Play_Level_Two();
+            currentstate = play_level_two;
           //  play = new states.Play();
            // currentstate = play;
            // play_level_two = new states.Play_Level_Two();
@@ -207,8 +218,9 @@ function changeState(state: number): void {
 
         case constants.PLAY_LEVEL_THREE:
             // instantiate play screen
-          //  play_level_three = new states.Play_Level_Three();
-          //  currentstate = play_level_three;
+            config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
+           play_level_three = new states.Play_Level_Three();
+            currentstate = play_level_three;
             //play = new states.Play();
           //  play_level_two = new states.Play_Level_Two();
           //  currentstate = play_level_two;

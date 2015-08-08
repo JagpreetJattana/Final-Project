@@ -70,9 +70,15 @@
     <Content Include="assets\images\cloud.png" />
     <Content Include="assets\images\colliding.png" />
     <Content Include="assets\images\enemy.png" />
+    <Content Include="assets\images\exitButton.png" />
     <Content Include="assets\images\gameover.png" />
+    <Content Include="assets\images\instructionsButton.png" />
     <Content Include="assets\images\Iron_Bow.png" />
     <Content Include="assets\images\island.png" />
+    <Content Include="assets\images\level1Button.png" />
+    <Content Include="assets\images\level2Button.png" />
+    <Content Include="assets\images\level3Button.png" />
+    <Content Include="assets\images\levelsButton.png" />
     <Content Include="assets\images\mainbackground.png" />
     <Content Include="assets\images\menu.png" />
     <Content Include="assets\images\MyJason.png" />
@@ -80,7 +86,7 @@
     <Content Include="assets\images\obstacle2.png" />
     <Content Include="assets\images\ocean.gif" />
     <Content Include="assets\images\plane.png" />
-    <Content Include="assets\images\playagain.png" />
+    <Content Include="assets\images\playButton.png" />
     <Content Include="assets\images\ring.png" />
     <Content Include="assets\images\startbutton.png" />
     <Content Include="assets\images\superman.png" />
@@ -92,7 +98,6 @@
     <Content Include="Scripts\managers\collision.js.map" />
     <Content Include="Scripts\objects\button.js" />
     <Content Include="Scripts\objects\city.js" />
-    <Content Include="Scripts\objects\colliding.js" />
     <Content Include="Scripts\objects\gameObject.js.map" />
     <Content Include="Scripts\objects\ring.js" />
     <Content Include="Scripts\objects\scoreboard.js.map" />
@@ -109,7 +114,6 @@
     <Content Include="Scripts\constants.js.map" />
     <Content Include="Scripts\objects\button.js.map" />
     <Content Include="Scripts\objects\city.js.map" />
-    <Content Include="Scripts\objects\colliding.js.map" />
     <Content Include="Scripts\objects\ring.js.map" />
     <Content Include="Scripts\States\gameover.js.map" />
     <Content Include="Scripts\States\menu.js.map" />
@@ -161,7 +165,6 @@
     <TypeScriptCompile Include="Scripts\objects\bow.ts" />
     <TypeScriptCompile Include="Scripts\objects\button.ts" />
     <TypeScriptCompile Include="Scripts\objects\city.ts" />
-    <TypeScriptCompile Include="Scripts\objects\colliding.ts" />
     <TypeScriptCompile Include="Scripts\objects\doraemon.ts" />
     <TypeScriptCompile Include="Scripts\objects\finalMonster.ts" />
     <TypeScriptCompile Include="Scripts\objects\fireball.ts" />

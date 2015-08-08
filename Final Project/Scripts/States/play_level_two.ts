@@ -12,25 +12,30 @@
         //method updating playing state objects
 
         public update() {
-            city.update();
+           
             doraemon.update();
            // doraemonArrow.update();
-            arrowManager.update();
-            ring.update();
-           // iron_bow.update();
+            if (!config.DORAEMON_DIEING) {
+                city.update();
+                arrowManager.update();
+                ring.update();
+                 iron_bow.update();
 
-            obstacle1.update();
-            obstacle_down.update();
-           // collision.check(iron_bow);
-          //  if (config.ARROW_FIRED) {
-               // collision_other.check(watermellon, arrow);
-         //   }
-            watermellon.update();
+                obstacle1.update();
+                obstacle_down.update();
+                collision.check_obstacle();
+                 collision.check(iron_bow);
+                //  if (config.ARROW_FIRED) {
+                // collision_other.check(watermellon, arrow);
+                //   }
+                watermellon.update();
 
-            collision.check(ring);
-            collision.check(obstacle1);
-            collision.check(obstacle_down);
-            scoreboard.update();
+                collision.check(ring);
+                collision.check(obstacle1);
+                collision.check(obstacle_down);
+                collision.check(watermellon);
+                scoreboard.update();
+            }
             stage.update();
 
         }
@@ -54,8 +59,7 @@
 
             doraemonArrow = new objects.Doraemon("DomArrow");
 
-            //add colliding to the stage
-            colliding = new objects.Colliding(assets.loader.getResult("colliding"));
+         
 
             // add 3 fireballs objects to stage
             //obstacle1 = new objects.Obstacle(assets.loader.getResult("obstacle1"));
@@ -71,8 +75,8 @@
             game.addChild(ring);
 
             //add bow to the stage
-           // iron_bow = new objects.Bow("Iron_Bow");
-           // game.addChild(iron_bow);
+            iron_bow = new objects.Bow("Iron_Bow");
+            game.addChild(iron_bow);
 
             watermellon = new objects.WaterMellon("melon");
             game.addChild(watermellon);

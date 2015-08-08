@@ -52,6 +52,10 @@
     export var FIRING_FIREBALL: boolean = false;
     export var ACTIVE_STATE: number = 99;
     export var FRAME_COUNTER: number = 0;
+    export var MONSTER_IS_THERE: boolean = true;
+    export var MELLON_DIEING: boolean = false;
+    export var DORAEMON_DIEING: boolean = false;
+    export var HAVING_CONTROLS: boolean = true;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;

@@ -35,9 +35,11 @@
 
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
-            if (config.MOVE_UP) { this.y -= 4;}
-            if (config.MOVE_DOWN) { this.y += 4; }
-            this.checkBounds();
+            if (config.MONSTER_IS_THERE) {
+                if (config.MOVE_UP) { this.y -= 4; }
+                if (config.MOVE_DOWN) { this.y += 4; }
+                this.checkBounds();
+            }
         }
     }
 }    

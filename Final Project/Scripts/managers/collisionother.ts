@@ -23,15 +23,17 @@
                 if (gameObject.isColliding == false) {
                     console.log("collisionother");
                     if ((gameObject.name == "watermellon") && (gameObject2.name == "Arrow")) {
-                      //  watermellon.gotoAndPlay("melondie");
+                        watermellon.gotoAndPlay("melon3");
+                        config.MELLON_DIEING = true;
                         //game.removeChild(arrow);
-
+                        scoreboard.score += 50;
                         window.setTimeout(function () {
                             game.removeChild(watermellon);
                             config.MELLON_IS_THERE = false;
-                         //   watermellon.gotoAndStop("melondie");
-                         //   watermellon.gotoAndPlay("melon");
-                        }, 450);
+                            watermellon.gotoAndStop("melon3");
+                            config.MELLON_DIEING = false;
+                            watermellon.gotoAndPlay("melon");
+                        }, 850);
 
                         
                         //watermellon.stop();           
@@ -40,6 +42,20 @@
                     }
                     if ((gameObject.name == "FinalMonster") && (gameObject2.name == "Arrow")) {
                         scoreboard.mpower -= 2;
+                        if (scoreboard.mpower < 0) {
+                            scoreboard.mpower = 0;
+                            
+                            config.MONSTER_IS_THERE = false;
+                            config.FIRING_FIREBALL = false;
+                            final_Monster.gotoAndPlay("FinalMonsterDieing");
+                            window.setTimeout(function () {
+                                game.removeChild(final_Monster);
+                                
+                             // final_Monster.gotoAndStop("FinalMonsterDieing");
+                              
+                            }, 1200);
+                        }
+
 
                     }
                     if ((gameObject.name == "doraemon") && (gameObject2.name == "Fireball")) {

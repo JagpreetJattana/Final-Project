@@ -38,8 +38,10 @@
                 this.reset();
                 config.MELLON_IS_THERE = true;
             } else {
-                this.x -= 4; // moves water mellons from right to left
-                this.checkBounds();
+                if (!config.MELLON_DIEING) {
+                    this.x -= 4; // moves water mellons from right to left
+                    this.checkBounds();
+                }
             }
             
            

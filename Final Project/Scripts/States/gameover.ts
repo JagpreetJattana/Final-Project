@@ -35,9 +35,9 @@
             game.addChild(gameoverlbl);
 
             //adding play again button
-            playagainbutton = new objects.Button(assets.loader.getResult("playagainbutton"), 320, 330);
-            game.addChild(playagainbutton);
-            playagainbutton.on("click", this.playagainbuttonclicked);
+          //  playagainbutton = new objects.Button(assets.loader.getResult("playagainbutton"), 320, 330);
+         ///   game.addChild(playagainbutton);
+         //   playagainbutton.on("click", this.playagainbuttonclicked);
 
             stage.addChild(game);
 

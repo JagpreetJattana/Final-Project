@@ -8,11 +8,17 @@
         //private properties
         private manifest = [
             { id: "Background", src: "assets/images/Background.png" },
-            { id: "superman", src: "assets/images/superman.png" },
-            { id: "ring", src: "assets/images/ring.png" },
-            { id: "menu", src: "assets/images/menu.png" },
+            { id: "playButton", src: "assets/images/playButton.png" },
+            { id: "instructionsButton", src: "assets/images/instructionsButton.png" },
+            { id: "levelsButton", src: "assets/images/levelsButton.png" },
+            { id: "exitButton", src: "assets/images/exitButton.png" },
+            { id: "level1Button", src: "assets/images/level1Button.png" },
+            { id: "level2Button", src: "assets/images/level2Button.png" },
+            { id: "level3Button", src: "assets/images/level3Button.png" },
+          
+          
             { id: "gameoverlbl", src: "assets/images/gameover.png" },
-            { id: "playagainbutton", src: "assets/images/playagain.png" },
+         
             { id: "startbutton", src: "assets/images/startbutton.png" },
             { id: "ringing", src: "assets/audio/pickupcoin.wav" },
             { id: "fireballs", src: "assets/audio/destroy.wav" },
@@ -81,24 +87,33 @@
                 
                
                
-                "FinalMonsterDieing1": [7],
+              
                
-                "melon2": [9],
-                "FinalMonsterDieing3": [10],
-                "FinalMonsterDieing2": [11],
-                "FinalMonsterDieing5": [12],
-                "FinalMonsterDieing": [13],
-                "FinalMonsterDieing4": [14],
-                "melon": [15],
-                "melon4": [16],
+              
+               
+              
+              
+                "FinalMonsterDieing": {
+                   frames: [13, 7, 11, 10, 14, 12, 19],
+                    speed: 0.1,
+                },
+              
+                "melon": {
+                    frames: [15, 9],
+                    speed: 0.1
+                },
+                
                 "ring": [17],
-                "melon7": [18],
-                "FinalMonsterDieing6": [19],
-                "melon5": [20],
+            
+              
+             
 
 
-                "melon3": [23],
-                "melon6": [24],
+                "melon3": {
+                    frames: [23,16,20,24,18],
+                    speed: 0.1
+                },
+              
 
                 "Iron_Bow": [26],
                 "DomArrow": [27],
@@ -109,12 +124,15 @@
 
                 "Arrow": [29],
                 "DomArrow1": [30],
-                "Dora_die": [31],
+                "Dora_die": {
+                    frames: [31, 36, 33],
+                    speed:0.1
+                },
                 "DomArrow2": [32],
-                "Dora_die3": [33],
+             
                
                 "DomArrow3": [35],
-                "Dora_die2": [36],
+               
                 
                 "Fireball": {
                     frames: [39, 37, 38, 34],

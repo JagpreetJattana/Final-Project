@@ -23,26 +23,30 @@
             if (gameObject.isColliding == false) {
                 console.log("collision");
                 createjs.Sound.play(gameObject.soundString);
-                if ((gameObject.name == "obstacle1") || (gameObject.name =="obstacle_down")) {
+                if ((gameObject.name == "obstacle1") || (gameObject.name == "obstacle_down")) {
+                   
                     scoreboard.lives--;
                   
                 }
                 if (gameObject.name == "ring") {
                     scoreboard.score += 100;
                     if (scoreboard.score > 2000) {
-                      //  changeState(constants.PLAY_LEVEL_TWO);
+                        //  changeState(constants.PLAY_LEVEL_TWO);
                     }
                     config.RINGSTRIKE = true;
-                    ring.reset();                   
-                    
+                    ring.reset();
+
                 }
-               else if (gameObject.name == "Bow") {
+                else if (gameObject.name == "Bow") {
                     //to show that player has succesfully got the bow
-                    //game.removeChild(doraemon);
-                    //game.addChild(doraemonArrow);
-                   // doraemon = new objects.Doraemon("DomArrow");
+                 
                     config.HAVING_BOW = true;
                     game.removeChild(iron_bow);
+                }
+                else if (gameObject.name == "watermellon") {
+
+                    doraemon.dieing();
+
                 }
             }
             gameObject.isColliding = true;
@@ -51,7 +55,19 @@
             gameObject.isColliding = false;
         }
 
-    }
+        }
+
+        public check_obstacle(): void{
+
+         
+            if (((doraemon.x > (obstacle1.x - 41)) && (doraemon.x < (obstacle1.x + 41)) && (doraemon.y < (obstacle1.y + 150)) && (doraemon.y > (obstacle1.y - 150))) || ((doraemon.x > (obstacle1.x - 24)) && (doraemon.x < (obstacle1.x + 24)) && (doraemon.y > (obstacle1.y + 250)) && (doraemon.y < (obstacle1.y + 550)))){
+                console.log("collision with obstacle");
+                doraemon.dieing();
+
+            }
+
+
+        }
 
 
 

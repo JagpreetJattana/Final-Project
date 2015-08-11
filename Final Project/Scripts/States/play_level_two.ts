@@ -45,6 +45,9 @@
         main() {
 
             game = new createjs.Container();
+
+            createjs.Sound.stop();
+            createjs.Sound.play("level1Sound", { "loop": -1 });
           
             //adding city object to stage
             city = new objects.City(assets.loader.getResult("Background"));
@@ -54,8 +57,7 @@
 
             // add superman object to stage
             //   superman = new objects.Superman(assets.loader.getResult("superman"));
-            doraemon = new objects.Doraemon("Dom");
-            game.addChild(doraemon);
+          
 
             doraemonArrow = new objects.Doraemon("DomArrow");
 
@@ -80,6 +82,9 @@
 
             watermellon = new objects.WaterMellon("melon");
             game.addChild(watermellon);
+
+            doraemon = new objects.Doraemon("Dom");
+            game.addChild(doraemon);
           
             //add scoreboard
             scoreboard = new objects.ScoreBoard();

@@ -93,6 +93,8 @@ module states {
         main() {
             
             game = new createjs.Container();
+            createjs.Sound.stop();
+            createjs.Sound.play("menuSound", { "loop": -1 });
 
             //adding city object to stage
             city = new objects.City(assets.loader.getResult("Background"));

@@ -18,6 +18,7 @@
             arrow = new objects.Arrow();
 
             game.addChild(arrow);
+            createjs.Sound.play("arrowSound");
 
             arrow.init();
             config.ARROW_FIRED = true;

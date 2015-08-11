@@ -10,20 +10,19 @@
             window.onkeyup = this.jumpdown;
             this.name = "doraemon";
       
-
+          
 
             this.dy = 3;
             this.y = 0;
 
-            this.soundString = "supermansound";
+         
             if (config.ACTIVE_STATE == constants.PLAY_LEVEL_THREE) {
                 this.x = 100;
             }
             else {
                 this.x = 250;
             }
-            createjs.Sound.stop();
-            createjs.Sound.play(this.soundString, { "loop": -1 });
+         
 
         }
 
@@ -62,6 +61,7 @@
                 this.dieing();
             }
             else if (this.y < 0) {
+                
                 this.y += 7;
                 config.JUMP = false;
            }
@@ -73,6 +73,7 @@
                 switch (event.keyCode) {
                     case config.KEY_UP:
                         config.JUMP = true;
+                        createjs.Sound.play("jumpSound");
 
                         break;
                     case config.KEY_DOWN:
@@ -107,6 +108,7 @@
 
         private performingjump() {
             if (config.JUMP) {
+               
                 this.y -= 7;
 
             }

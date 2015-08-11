@@ -61,8 +61,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\audio\arrow.wav" />
     <Content Include="assets\audio\destroy.wav" />
+    <Content Include="assets\audio\hit_monster.wav" />
+    <Content Include="assets\audio\jump.wav" />
+    <Content Include="assets\audio\level3Sound.wav" />
+    <Content Include="assets\audio\menuStateSound.wav" />
+    <Content Include="assets\audio\monster_dying.wav" />
     <Content Include="assets\audio\pickupcoin.wav" />
+    <Content Include="assets\audio\watermelon.wav" />
     <Content Include="assets\images\Arrow.png" />
     <Content Include="assets\images\Background.png" />
     <Content Include="assets\images\Background2.png" />
@@ -120,6 +127,7 @@
     <Content Include="Scripts\config\config.js.map" />
     <Content Include="assets\images\MyJason.json" />
     <Content Include="assets\audio\star.ogg" />
+    <Content Include="assets\audio\Arrow.bfxrsound" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

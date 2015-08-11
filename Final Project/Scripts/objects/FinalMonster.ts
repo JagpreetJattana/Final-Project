@@ -6,6 +6,7 @@
         constructor(imageString: string) {
             super(imageString);
             this.name = "FinalMonster";
+            this.soundString = "hit_monsterSound";
             this.x = 580;
             this.y = 600;
             this.scaleX = -1;

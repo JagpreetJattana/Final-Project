@@ -20,8 +20,10 @@
             p2.y = gameObject2.y;
 
             if (utility.distance(p1, p2) < ((gameObject.height * 0.5 + gameObject2.height * 0.5))) {
-                if (gameObject.isColliding == false) {
+              //  if (gameObject.isColliding == false) {
+                if ((gameObject.isColliding == false)&&(gameObject2.isColliding==false)) {
                     console.log("collisionother");
+                    createjs.Sound.play(gameObject.soundString);
                     if ((gameObject.name == "watermellon") && (gameObject2.name == "Arrow")) {
                         watermellon.gotoAndPlay("melon3");
                         config.MELLON_DIEING = true;
@@ -42,18 +44,19 @@
                     }
                     if ((gameObject.name == "FinalMonster") && (gameObject2.name == "Arrow")) {
                         scoreboard.mpower -= 2;
-                        if (scoreboard.mpower < 0) {
+                        if (scoreboard.mpower < 98) {
                             scoreboard.mpower = 0;
-                            
+                            createjs.Sound.play("monsterSound");
                             config.MONSTER_IS_THERE = false;
                             config.FIRING_FIREBALL = false;
+                            config.HAVING_BOW = false;
                             final_Monster.gotoAndPlay("FinalMonsterDieing");
                             window.setTimeout(function () {
                                 game.removeChild(final_Monster);
                                 
                              // final_Monster.gotoAndStop("FinalMonsterDieing");
                               
-                            }, 1200);
+                            }, 1100);
                         }
 
 
@@ -67,10 +70,12 @@
                    
                 }
                 gameObject.isColliding = true;
+                gameObject2.isColliding = true;
                 
             }
             else {
                 gameObject.isColliding = false;
+                gameObject2.isColliding = false;
             }
 
         }

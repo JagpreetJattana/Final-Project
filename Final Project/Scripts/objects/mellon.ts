@@ -7,7 +7,7 @@
             super(imageString);
             this.name = "watermellon";
 
-            this.soundString = "fireballs";
+            this.soundString = "watermelonSound";
             this.reset();
         }
 

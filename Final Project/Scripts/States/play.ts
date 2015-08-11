@@ -34,6 +34,8 @@
 
 
         main() {
+            createjs.Sound.stop();
+            createjs.Sound.play("level1Sound", { "loop": -1 });
             
             game = new createjs.Container();
           

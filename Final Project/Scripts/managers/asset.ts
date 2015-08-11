@@ -21,8 +21,17 @@
          
             { id: "startbutton", src: "assets/images/startbutton.png" },
             { id: "ringing", src: "assets/audio/pickupcoin.wav" },
+
+            { id: "watermelonSound", src: "assets/audio/watermelon.wav" },
+            { id: "hit_monsterSound", src: "assets/audio/hit_monster.wav" },
+            { id: "arrowSound", src: "assets/audio/arrow.wav" },
+            { id: "level3Sound", src: "assets/audio/level3Sound.wav" },
+            { id: "jumpSound", src: "assets/audio/jump.wav" },
+            { id: "menuSound", src: "assets/audio/menuStateSound.wav" },
+            { id: "monsterSound", src: "assets/audio/monster_dying.wav" },
+
             { id: "fireballs", src: "assets/audio/destroy.wav" },
-            { id: "supermansound", src: "assets/audio/star.ogg" },
+            { id: "level1Sound", src: "assets/audio/star.ogg" },
             { id: "colliding", src: "assets/images/colliding.png" },
             { id: "bullet", src: "assets/images/bullet.png" },
         ];

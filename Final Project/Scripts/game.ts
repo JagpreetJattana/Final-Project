@@ -3,6 +3,7 @@
 /// <reference path="typings/tweenjs/tweenjs.d.ts" />
 /// <reference path="typings/soundjs/soundjs.d.ts" />
 /// <reference path="typings/preloadjs/preloadjs.d.ts" />
+/// <reference path="buttonmethods/buttonmethods.ts" />
 
 /// <reference path="config/config.ts" />
 /// <reference path="managers/arrow.ts" />
@@ -38,6 +39,8 @@
 /// <reference path="states/play.ts" />
 /// <reference path="states/play_level_two.ts" />
 /// <reference path="states/play_level_three.ts" />
+/// <reference path="states/win.ts" />
+
 
 
 /// <reference path="objects/button.ts" />
@@ -73,6 +76,7 @@ var iron_bow: objects.Bow;
 var watermellon: objects.WaterMellon;
 var menulbl: createjs.Bitmap;
 var gameoverlbl: createjs.Bitmap;
+var winlbl: createjs.Bitmap;
 var ring: objects.Ring;
 
 var obstacle1: objects.Obstacle;
@@ -82,6 +86,7 @@ var play: states.Play;
 var menu: states.Menu;
 var play_level_two: states.Play_Level_Two;
 var play_level_three: states.Play_Level_Three;
+var win_state: states.Win;
 
 var gameover: states.Gameover;
 var currentstate;
@@ -91,6 +96,7 @@ var arrowManager: managers.ArrowManager;
 var fireballManager: managers.FireballManager;
 var collision: managers.Collision;
 var collision_other: managers.Collision_other;
+var btnMethods: buttonMethods.Button_Methods;
 
 //game buttons
 var startbutton: objects.Button;
@@ -103,6 +109,7 @@ var exitButton: objects.Button;
 var level1Button: objects.Button;
 var level2Button: objects.Button;
 var level3Button: objects.Button;
+var menuButton: objects.Button;
 
 
 
@@ -137,7 +144,7 @@ function setupStats() {
 
     // align bottom-right
     stats.domElement.style.position = 'absolute';
-    stats.domElement.style.left = '650px';
+    stats.domElement.style.left = '150px';
     stats.domElement.style.top = '10px';
 
     document.body.appendChild(stats.domElement);
@@ -176,7 +183,10 @@ function main() {
      // play = new states.Play();
   //  currentstate = play;
   // play_level_two = new states.Play_Level_Two();
-   currentstate = menu;
+   currentstate =menu;
+   // gameover = new states.Gameover();
+  //  currentstate = gameover;
+
    // play_level_three = new states.Play_Level_Three();
    // currentstate = play_level_three;
     
@@ -188,7 +198,8 @@ function changeState(state: number): void {
     switch (state) {
         case constants.MENU_STATE:
             // instantiate menu screen
-           // currentstate = menu;
+            menu = new states.Menu();
+            currentstate = menu;
             //currentstate = play;
            // currentstate = play_level_two;
 
@@ -229,10 +240,18 @@ function changeState(state: number): void {
 
         case constants.GAME_OVER_STATE:
             gameover = new states.Gameover();
-            //currentstate = gameover;
+            currentstate = gameover;
             //currentstate = play;
            // play_level_two = new states.Play_Level_Two();
            // currentstate = play_level_two;
+            break;
+
+        case constants.WIN_STATE:
+            win_state = new states.Win();
+            currentstate = win_state;
+            //currentstate = play;
+            // play_level_two = new states.Play_Level_Two();
+            // currentstate = play_level_two;
             break;
     }
 }

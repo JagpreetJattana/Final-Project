@@ -26,6 +26,10 @@
                 if ((gameObject.name == "obstacle1") || (gameObject.name == "obstacle_down")) {
                    
                     scoreboard.lives--;
+                    if (scoreboard.lives < 0) {
+                        changeState(constants.GAME_OVER_STATE);
+
+                    }
                   
                 }
                 if (gameObject.name == "ring") {
@@ -60,11 +64,13 @@
         public check_obstacle(): void{
 
          
-            if (((doraemon.x > (obstacle1.x - 41)) && (doraemon.x < (obstacle1.x + 41)) && (doraemon.y < (obstacle1.y + 150)) && (doraemon.y > (obstacle1.y - 150))) || ((doraemon.x > (obstacle1.x - 24)) && (doraemon.x < (obstacle1.x + 24)) && (doraemon.y > (obstacle1.y + 250)) && (doraemon.y < (obstacle1.y + 550)))){
+            if (((doraemon.x > (obstacle1.x - 41)) && (doraemon.x < (obstacle1.x + 41)) && (doraemon.y < (obstacle1.y + 150)) && (doraemon.y > (obstacle1.y - 150))) || ((doraemon.x > (obstacle1.x - 24)) && (doraemon.x < (obstacle1.x + 24)) && (doraemon.y > (obstacle1.y + 250)) && (doraemon.y < (obstacle1.y + 550)))) {
+               
                 console.log("collision with obstacle");
                 doraemon.dieing();
-
+               
             }
+           
 
 
         }

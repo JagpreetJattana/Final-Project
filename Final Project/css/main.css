@@ -1,6 +1,19 @@
 ﻿body {
+    
+    background-image:url("../assets/images/backgroundImage.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+
+
 }
 
 canvas {
     border: dashed 1px black;
+   
+   padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+   
 }

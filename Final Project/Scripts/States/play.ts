@@ -47,9 +47,7 @@
 
         // add superman object to stage
      //   superman = new objects.Superman(assets.loader.getResult("superman"));
-        doraemon = new objects.Doraemon("Dom");
-        game.addChild(doraemon);
-
+ 
       
         // add 3 fireballs objects to stage
         //obstacle1 = new objects.Obstacle(assets.loader.getResult("obstacle1"));
@@ -63,6 +61,10 @@
         //add rings object to stage
         ring = new objects.Ring("ring");
         game.addChild(ring);
+
+        doraemon = new objects.Doraemon("Dom");
+        game.addChild(doraemon);
+
 
       
       //  for (var ball = 0; ball < 3; ball++) {

@@ -53,6 +53,7 @@
                             final_Monster.gotoAndPlay("FinalMonsterDieing");
                             window.setTimeout(function () {
                                 game.removeChild(final_Monster);
+                                changeState(constants.WIN_STATE);
                                 
                              // final_Monster.gotoAndStop("FinalMonsterDieing");
                               
@@ -63,6 +64,9 @@
                     }
                     if ((gameObject.name == "doraemon") && (gameObject2.name == "Fireball")) {
                         scoreboard.dpower -= 2;
+                        if (scoreboard.dpower < 0) {
+                            changeState(constants.GAME_OVER_STATE);
+                        }
 
                     }
 

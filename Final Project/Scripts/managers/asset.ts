@@ -15,9 +15,11 @@
             { id: "level1Button", src: "assets/images/level1Button.png" },
             { id: "level2Button", src: "assets/images/level2Button.png" },
             { id: "level3Button", src: "assets/images/level3Button.png" },
+            { id: "menuButton", src: "assets/images/menuButton.png" },
           
           
             { id: "gameoverlbl", src: "assets/images/gameover.png" },
+            { id: "winlbl", src: "assets/images/winlbl.png" },
          
             { id: "startbutton", src: "assets/images/startbutton.png" },
             { id: "ringing", src: "assets/audio/pickupcoin.wav" },
@@ -29,6 +31,7 @@
             { id: "jumpSound", src: "assets/audio/jump.wav" },
             { id: "menuSound", src: "assets/audio/menuStateSound.wav" },
             { id: "monsterSound", src: "assets/audio/monster_dying.wav" },
+            { id: "weepSound", src: "assets/audio/weep.wav" },
 
             { id: "fireballs", src: "assets/audio/destroy.wav" },
             { id: "level1Sound", src: "assets/audio/star.ogg" },

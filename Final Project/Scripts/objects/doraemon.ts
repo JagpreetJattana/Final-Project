@@ -37,10 +37,16 @@
         }
         public dieing(): void {
             scoreboard.lives -= 1;
+            if (scoreboard.lives < 0) {
+
+                changeState(constants.GAME_OVER_STATE);
+            }
+
 
             config.DORAEMON_DIEING = true;
             config.HAVING_CONTROLS = false;
             doraemon.gotoAndPlay("Dora_die");
+            //createjs.Sound.play("weepSound");
 
             window.setTimeout(function () {
                 doraemon.y = -900;
@@ -107,10 +113,8 @@
         }
 
         private performingjump() {
-            if (config.JUMP) {
-               
+            if (config.JUMP) {               
                 this.y -= 7;
-
             }
         }
     }

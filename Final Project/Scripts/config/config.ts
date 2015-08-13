@@ -56,6 +56,7 @@
     export var MELLON_DIEING: boolean = false;
     export var DORAEMON_DIEING: boolean = false;
     export var HAVING_CONTROLS: boolean = true;
+    export var OBSTACLE_COLLIDING: boolean = false;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;

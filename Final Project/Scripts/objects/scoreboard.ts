@@ -18,6 +18,8 @@
             this.monster_power = new createjs.Text("Monster:", "40px Consolas", "#FFFF00");;
             this.scoreLabel.x = 350;
             this.monster_power.x = 350;
+            
+            //To shoe the scoreboard according to the active state
             if (config.ACTIVE_STATE == constants.PLAY_LEVEL_THREE) {
                 game.removeChild(this.scoreLabel);
                 game.removeChild(this.livesLabel);

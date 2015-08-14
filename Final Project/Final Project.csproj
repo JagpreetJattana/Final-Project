@@ -67,6 +67,7 @@
     <Content Include="assets\audio\jump.wav" />
     <Content Include="assets\audio\level3Sound.wav" />
     <Content Include="assets\audio\menuStateSound.wav" />
+    <Content Include="assets\audio\monsterFiring.wav" />
     <Content Include="assets\audio\monster_dying.wav" />
     <Content Include="assets\audio\pickupcoin.wav" />
     <Content Include="assets\audio\watermelon.wav" />
@@ -76,6 +77,7 @@
     <Content Include="assets\images\Background.png" />
     <Content Include="assets\images\Background2.png" />
     <Content Include="assets\images\backgroundImage.jpg" />
+    <Content Include="assets\images\backgroundImage.png" />
     <Content Include="assets\images\bullet.png" />
     <Content Include="assets\images\cloud.png" />
     <Content Include="assets\images\colliding.png" />
@@ -87,8 +89,10 @@
     <Content Include="assets\images\island.png" />
     <Content Include="assets\images\level1Button.png" />
     <Content Include="assets\images\Level1Instructions.png" />
+    <Content Include="assets\images\level2background.png" />
     <Content Include="assets\images\level2Button.png" />
     <Content Include="assets\images\Level2Instructions.png" />
+    <Content Include="assets\images\level3Background.png" />
     <Content Include="assets\images\level3Button.png" />
     <Content Include="assets\images\Level3Instructions.png" />
     <Content Include="assets\images\levelsButton.png" />

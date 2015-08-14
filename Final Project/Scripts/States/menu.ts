@@ -13,7 +13,7 @@ module states {
             stage.update();
         }
 
-
+        //method for moving game from menu to play state
         public stateTrasition() {
 
             game.removeChild(playButton);
@@ -49,6 +49,7 @@ module states {
             game.addChild(playButton);
             playButton.on("click", btnMethods.playButton);
 
+            //adding another play button
             playButton2 = new objects.Button(assets.loader.getResult("playButton"), 500, 330);
             playButton2.on("click", btnMethods.playButton2);
 
@@ -79,6 +80,7 @@ module states {
             level3Button = new objects.Button(assets.loader.getResult("level3Button"), 300, 270);
             level3Button.on("click", btnMethods.level3Button);
 
+            //adding next and back buttons
             nextButton = new objects.Button(assets.loader.getResult("nextButton"), 500, 330);
             nextButton.on("click", btnMethods.nextButton);
             backButton = new objects.Button(assets.loader.getResult("backButton"), 150, 330);
@@ -87,7 +89,7 @@ module states {
             menuButton.on("click", btnMethods.menuButton);
 
             
-
+            //initializing instructions lable
             level1inst = new createjs.Bitmap(assets.loader.getResult("l1instlbl"));
             level2inst = new createjs.Bitmap(assets.loader.getResult("l2instlbl"));
             level3inst = new createjs.Bitmap(assets.loader.getResult("l3instlbl"));

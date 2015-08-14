@@ -1,5 +1,5 @@
 ﻿module objects {
-    // fireball Class ++++++++++++++++++++++++++++++++++++++
+    // obstacle Class. This class defines downside obstacle
     export class Obstacle_down extends objects.GameObject {
        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
@@ -14,7 +14,7 @@
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
         private checkBounds(): void {
 
-            // check if fireball has left screen
+            // check if obstacle has left screen
             if (this.x < 0) {
                 this.reset();
             }
@@ -22,8 +22,8 @@
 
 
         private reset(): void {
-            this.y = obstacle1.y+400; // start fireballs at random location
-            this.x = 660; // start fireball off stage
+            this.y = obstacle1.y+400; // start obstacle at random location
+            this.x = 660; // start obstacle off stage
             
           
         }
@@ -32,8 +32,8 @@
         // PUBLIC METHODS +++++++++++++++++++++++++++++++
         public update(): void {
 
-            this.x -= 3; // moves fireball up and down the stage
-            // drifts fireballs left
+            this.x -= 3; // moves obstacle up and down the stage
+            
             this.checkBounds();
         }
     }

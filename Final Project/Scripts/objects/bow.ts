@@ -14,7 +14,7 @@
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
         private checkBounds(): void {
 
-            // check if fireball has left screen
+            // condition to bring bow again on the screen
             if (this.x < -2000) {
                 
                 this.reset();

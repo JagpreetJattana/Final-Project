@@ -1,5 +1,5 @@
 ﻿module objects {
-    //Bow Class ++++++++++++++++++++++++++++++++++++++
+    //Final Monster Class ++++++++++++++++++++++++++++++++++++++
     export class FinalMonster extends objects.GameObject {
        
         // CONSTRUCTOR ++++++++++++++++++++++++++++++++++
@@ -11,15 +11,13 @@
             this.y = 600;
             this.scaleX = -1;
             config.MOVE_UP = true;
-          
-            //  this.soundString = "bow";
-           // this.reset();
+        
         }
 
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
         private checkBounds(): void {
 
-            // check if fireball has left screen
+           //to keep monster in between the cancas height
             if (this.y < 40) { 
                 config.MOVE_UP = false;
                 config.MOVE_DOWN = true;                

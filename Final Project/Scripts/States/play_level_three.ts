@@ -1,5 +1,5 @@
 ﻿module states {
-    //class defining play state
+    //class defining play level three state
     export class Play_Level_Three {
         //game variables
 
@@ -9,7 +9,7 @@
             this.main();
 
         }
-        //method updating playing state objects
+        //method updating play level three state objects
 
         public update() {
             city.update();
@@ -41,20 +41,21 @@
             createjs.Sound.play("level3Sound", { "loop": -1 });
           
             //adding city object to stage
-            city = new objects.City(assets.loader.getResult("Background"));
+            city = new objects.City(assets.loader.getResult("level3Background"));
             game.addChild(city);
 
                   
 
            
-
+            // adding final monster to stage
             final_Monster = new objects.FinalMonster("FinalMonster");
             game.addChild(final_Monster);
 
-
+            // adding doraemon to stage
             doraemon = new objects.Doraemon("Dom");
             game.addChild(doraemon);
 
+            //making sure that doraemon has bow
             config.HAVING_BOW = true;
           
             //add scoreboard

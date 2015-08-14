@@ -14,7 +14,7 @@
         // PRIVATE METHODS ++++++++++++++++++++++++++++++
         private checkBounds(): void {
 
-            // check if fireball has left screen
+            // check if watermelon has left screen
             if (this.x < 0) {
               
                 this.reset();

@@ -1,11 +1,13 @@
 ﻿body {
     
-    background-image:url("../assets/images/backgroundImage.jpg");
+    background-image:url("../assets/images/backgroundImage.png");
 background-repeat:no-repeat;
 background-size:cover;
 
 
 }
+
+/*To bring canvs in centre*/
 
 canvas {
     border: dashed 1px black;

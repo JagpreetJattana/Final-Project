@@ -42,6 +42,8 @@
     export var TURN_RIGHT: boolean = false;
     export var JUMP: boolean = false;
     export var FIRING: boolean = false;
+
+    //constans for internal mechanics of game
     export var RINGSTRIKE: boolean = false;
     export var HAVING_BOW: boolean = false;
     export var PLAY_MELLON_ANIMATION: boolean = false;

@@ -192,20 +192,10 @@ function main() {
   
  
     menu = new states.Menu();
-    //currentstate = menu;
- 
-   // config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
-  //  config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
-     // play = new states.Play();
-  //  currentstate = play;
-  // play_level_two = new states.Play_Level_Two();
+  
     config.ACTIVE_STATE = constants.MENU_STATE;
    currentstate =menu;
-   // gameover = new states.Gameover();
-  //  currentstate = gameover;
-
-   // play_level_three = new states.Play_Level_Three();
-   // currentstate = play_level_three;
+  
     
 
 }
@@ -219,8 +209,7 @@ function changeState(state: number): void {
             config.ACTIVE_STATE = constants.MENU_STATE;
             menu = new states.Menu();
             currentstate = menu;
-            //currentstate = play;
-           // currentstate = play_level_two;
+          
 
 
             break;
@@ -230,55 +219,45 @@ function changeState(state: number): void {
             config.ACTIVE_STATE = constants.PLAY_STATE;
             play = new states.Play();
             currentstate = play;
-         //   play_level_two = new states.Play_Level_Two();
-           // currentstate = play_level_two;
+
 
             break;
 
         case constants.PLAY_LEVEL_TWO:
-            // instantiate play screen
+            // instantiate play level two screen
             config.ACTIVE_STATE = constants.PLAY_LEVEL_TWO;
             play_level_two = new states.Play_Level_Two();
             currentstate = play_level_two;
-          //  play = new states.Play();
-           // currentstate = play;
-           // play_level_two = new states.Play_Level_Two();
-            //currentstate = play_level_two;
+      
 
             break;
 
         case constants.PLAY_LEVEL_THREE:
-            // instantiate play screen
+            // instantiate play level three screen
             config.ACTIVE_STATE = constants.PLAY_LEVEL_THREE;
            play_level_three = new states.Play_Level_Three();
             currentstate = play_level_three;
-            //play = new states.Play();
-          //  play_level_two = new states.Play_Level_Two();
-          //  currentstate = play_level_two;
-
+          
             break;
 
         case constants.GAME_OVER_STATE:
+            //instantiating game over screen
             gameover = new states.Gameover();
             currentstate = gameover;
-            //currentstate = play;
-           // play_level_two = new states.Play_Level_Two();
-           // currentstate = play_level_two;
+        
             break;
 
         case constants.WIN_STATE:
+            //instantiating game win screen
             win_state = new states.Win();
             currentstate = win_state;
-            //currentstate = play;
-            // play_level_two = new states.Play_Level_Two();
-            // currentstate = play_level_two;
+          
             break;
         case constants.TRANSITION_STATE:
+            //instantiating level complete screen
             transition_state = new states.TransitionState();
             currentstate = transition_state;
-            //currentstate = play;
-            // play_level_two = new states.Play_Level_Two();
-            // currentstate = play_level_two;
+          
             break;
 
     }

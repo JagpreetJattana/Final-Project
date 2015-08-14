@@ -1,5 +1,5 @@
 ﻿ module managers {
-    // BULLET MANAGER CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // ARROW MANAGER CLASS +++++++++++++++++++++++++++++++++++++++++++++++++++++
     export class ArrowManager {
         // PRIVATE PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++
         private _arrows = [];
@@ -14,7 +14,7 @@
 
         // ARROW FIRE METHOD
         public _fire() {
-            // create two arrow on either side of  plane
+            // create arrows
             arrow = new objects.Arrow();
 
             game.addChild(arrow);
@@ -25,8 +25,7 @@
             this._arrows.push(arrow);
             
 
-            // Play Bullet Sound
-           // createjs.Sound.play("bullet");
+          
         } // end fire
 
         // ARROW DESTROY METHOD

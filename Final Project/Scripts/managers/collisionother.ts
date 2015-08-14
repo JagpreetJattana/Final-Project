@@ -6,7 +6,7 @@
 
         }
         //Public methods 
-        //check teh colision between superman and other objects
+        //check teh colision between any two objects of the game
         
         public check(gameObject: objects.GameObject, gameObject2: objects.GameObject) {
             // var scoreboard: objects.ScoreBoard;
@@ -29,6 +29,8 @@
                         config.MELLON_DIEING = true;
                         //game.removeChild(arrow);
                         scoreboard.score += 50;
+
+                        //Playing watermelon animation
                         window.setTimeout(function () {
                             game.removeChild(watermellon);
                             config.MELLON_IS_THERE = false;
@@ -36,6 +38,12 @@
                             config.MELLON_DIEING = false;
                             watermellon.gotoAndPlay("melon");
                         }, 850);
+                        // to change the state according to current state
+                            if (scoreboard.score > 2500) {
+                                changeState(constants.TRANSITION_STATE);
+                                scoreboard.score = 0;
+                            }
+                        
 
                         
                         //watermellon.stop();           
@@ -51,6 +59,8 @@
                             config.FIRING_FIREBALL = false;
                             config.HAVING_BOW = false;
                             final_Monster.gotoAndPlay("FinalMonsterDieing");
+
+                            //playing monster dieing animation
                             window.setTimeout(function () {
                                 game.removeChild(final_Monster);
                                 changeState(constants.WIN_STATE);

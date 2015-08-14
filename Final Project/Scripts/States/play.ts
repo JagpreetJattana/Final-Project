@@ -31,22 +31,7 @@
 
         }
 
-        public stateTransition() {
-            game.removeChild(playButton);
-            game.removeChild(exitButton);
-            game.removeChild(instructionsButton);
-
-            game.removeChild(menuButton);
-            game.removeChild(level1inst);
-            game.removeChild(level2inst);
-            game.removeChild(level3inst);
-            game.removeChild(backButton);
-            game.removeChild(nextButton);
-            game.removeChild(playButton2); 
-           
-            game.addChild(level2inst);
-
-        }
+    
 
 
         main() {
@@ -61,16 +46,14 @@
 
        
 
-        // add superman object to stage
-     //   superman = new objects.Superman(assets.loader.getResult("superman"));
+        
  
       
-        // add 3 fireballs objects to stage
-        //obstacle1 = new objects.Obstacle(assets.loader.getResult("obstacle1"));
+       // adding upper obstacle to stage
         obstacle1 = new objects.Obstacle("obstacle1");
         game.addChild(obstacle1);
 
-        //obstacle_down = new objects.Obstacle_down(assets.loader.getResult("obstacle_down"));
+    // adding lower obstacle to stage
         obstacle_down = new objects.Obstacle_down("obstacle2");
         game.addChild(obstacle_down);
 
@@ -78,16 +61,13 @@
         ring = new objects.Ring("ring");
         game.addChild(ring);
 
+// adding doraemon to stage
         doraemon = new objects.Doraemon("Dom");
         game.addChild(doraemon);
 
 
       
-      //  for (var ball = 0; ball < 3; ball++) {
-        //    fireballs[ball] = new objects.Fireball(assets.loader.getResult("fireball"));
-            //game.addChild(fireballs[ball]);
-       // }
-        //add scoreboard
+         //add scoreboard
         scoreboard = new objects.ScoreBoard();
         //add collision manager
         collision = new managers.Collision();

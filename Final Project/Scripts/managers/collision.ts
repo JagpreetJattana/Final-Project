@@ -6,7 +6,7 @@
 
         }
         //Public methods 
-        //check teh colision between superman and other objects
+        //check teh colision between doraemon and other objects
         
         public check(gameObject: objects.GameObject) {
            // var scoreboard: objects.ScoreBoard;
@@ -34,16 +34,29 @@
                 }
                 if (gameObject.name == "ring") {
                     scoreboard.score += 100;
-                    if (scoreboard.score > 200) {
-                        changeState(constants.TRANSITION_STATE);
-                        scoreboard.score = 0;
+
+                    //To change game state according to current state
+                    if (config.ACTIVE_STATE == constants.PLAY_STATE) {
+                        if (scoreboard.score > 2000) {
+                            changeState(constants.TRANSITION_STATE);
+                            scoreboard.score = 0;
+                        }
                     }
+                   else if (config.ACTIVE_STATE == constants.PLAY_LEVEL_TWO) {
+                        if (scoreboard.score >2500) {
+                            changeState(constants.TRANSITION_STATE);
+                            scoreboard.score = 0;
+                        }
+                    }
+
+                    //to tell the ring class to produce ring again.
                     config.RINGSTRIKE = true;
                     ring.reset();
 
                 }
                 else if (gameObject.name == "Bow") {
                     //to show that player has succesfully got the bow
+                    //and removing bow from the screen
                  
                     config.HAVING_BOW = true;
                     game.removeChild(iron_bow);
@@ -61,13 +74,14 @@
         }
 
         }
-
+        //This is the method that works to find if doraemon have collided with obstacle or not.
         public check_obstacle(): void{
 
          
             if (((doraemon.x > (obstacle1.x - 41)) && (doraemon.x < (obstacle1.x + 41)) && (doraemon.y < (obstacle1.y + 150)) && (doraemon.y > (obstacle1.y - 150))) || ((doraemon.x > (obstacle1.x - 24)) && (doraemon.x < (obstacle1.x + 24)) && (doraemon.y > (obstacle1.y + 250)) && (doraemon.y < (obstacle1.y + 550)))) {
                
                 console.log("collision with obstacle");
+                
                 doraemon.dieing();
                
             }

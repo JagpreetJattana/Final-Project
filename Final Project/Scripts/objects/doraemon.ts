@@ -33,9 +33,10 @@
                 this.checkbounds();
                 this.performingjump();
             }
-            //this.jump();// position superman under mouse
+          
         }
         public dieing(): void {
+            createjs.Sound.play("monsterFiring");
             scoreboard.lives -= 1;
             if (scoreboard.lives < 0) {
 
@@ -45,8 +46,9 @@
 
             config.DORAEMON_DIEING = true;
             config.HAVING_CONTROLS = false;
+            
             doraemon.gotoAndPlay("Dora_die");
-            //createjs.Sound.play("weepSound");
+            
 
             window.setTimeout(function () {
                 doraemon.y = -900;
@@ -72,6 +74,8 @@
                 config.JUMP = false;
            }
         }
+
+        //performing jump events
 
         private jump(event: KeyboardEvent) {
 
@@ -111,7 +115,8 @@
                 }
            
         }
-
+        
+        //method to perform jump acutally
         private performingjump() {
             if (config.JUMP) {               
                 this.y -= 7;

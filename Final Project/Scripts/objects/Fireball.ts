@@ -1,6 +1,6 @@
 ﻿module objects {
 
-    // Arrow Class
+    // Fireball Class
     export class Fireball extends objects.GameObject {
         constructor() {
             super("Fireball");

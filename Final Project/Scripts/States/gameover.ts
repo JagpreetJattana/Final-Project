@@ -11,16 +11,7 @@
             city.update();
             stage.update();
         }
-        //fauntion that is called when clicked playagain button
-        private playagainbuttonclicked(event: createjs.MouseEvent) {
-            stage.removeChild(game);
-            stage.removeAllChildren();
-            game.removeAllChildren();
-            game.removeAllEventListeners();
-
-            changeState(constants.PLAY_STATE);
-
-        }
+      
 
         main() {
 

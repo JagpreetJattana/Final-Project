@@ -8,6 +8,8 @@
         //private properties
         private manifest = [
             { id: "Background", src: "assets/images/Background.png" },
+            { id: "level2Background", src: "assets/images/level2background.png" },
+            { id: "level3Background", src: "assets/images/level3Background.png" },
             { id: "playButton", src: "assets/images/playButton.png" },
             { id: "instructionsButton", src: "assets/images/instructionsButton.png" },
             { id: "levelsButton", src: "assets/images/levelsButton.png" },
@@ -39,6 +41,7 @@
             { id: "menuSound", src: "assets/audio/menuStateSound.wav" },
             { id: "monsterSound", src: "assets/audio/monster_dying.wav" },
             { id: "weepSound", src: "assets/audio/weep.wav" },
+            { id: "monsterFiring", src: "assets/audio/monsterFiring.wav" },
 
             { id: "fireballs", src: "assets/audio/destroy.wav" },
             { id: "level1Sound", src: "assets/audio/star.ogg" },

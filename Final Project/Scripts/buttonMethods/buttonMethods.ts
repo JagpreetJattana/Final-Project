@@ -1,5 +1,6 @@
 ﻿module buttonMethods {
-
+    //This class containes all the methods that will be executed when a button is clicked.
+    //Names of the methods are exaclty same as the name of bttons.
     export class Button_Methods {
 
         public menuButton(): void{

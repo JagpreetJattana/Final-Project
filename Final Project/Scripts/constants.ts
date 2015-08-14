@@ -6,4 +6,5 @@
     export var PLAY_LEVEL_TWO: number = 3;
     export var PLAY_LEVEL_THREE: number = 4;
     export var WIN_STATE: number = 5;
+    export var TRANSITION_STATE: number = 6;
 }

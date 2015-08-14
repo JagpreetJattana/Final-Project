@@ -34,8 +34,9 @@
                 }
                 if (gameObject.name == "ring") {
                     scoreboard.score += 100;
-                    if (scoreboard.score > 2000) {
-                        //  changeState(constants.PLAY_LEVEL_TWO);
+                    if (scoreboard.score > 200) {
+                        changeState(constants.TRANSITION_STATE);
+                        scoreboard.score = 0;
                     }
                     config.RINGSTRIKE = true;
                     ring.reset();

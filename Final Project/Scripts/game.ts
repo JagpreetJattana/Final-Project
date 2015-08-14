@@ -36,9 +36,13 @@
 
 
 /// <reference path="constants.ts" />
+/// <reference path="states/transitionstate.ts" />
 /// <reference path="states/play.ts" />
 /// <reference path="states/play_level_two.ts" />
 /// <reference path="states/play_level_three.ts" />
+
+
+
 /// <reference path="states/win.ts" />
 
 
@@ -77,16 +81,23 @@ var watermellon: objects.WaterMellon;
 var menulbl: createjs.Bitmap;
 var gameoverlbl: createjs.Bitmap;
 var winlbl: createjs.Bitmap;
+var level1inst: createjs.Bitmap;
+var level2inst: createjs.Bitmap;
+var level3inst: createjs.Bitmap;
+var transitionLbl: createjs.Bitmap;
 var ring: objects.Ring;
 
 var obstacle1: objects.Obstacle;
 var obstacle_down: objects.Obstacle_down;
 var scoreboard: objects.ScoreBoard;
+
+//game states
 var play: states.Play;
 var menu: states.Menu;
 var play_level_two: states.Play_Level_Two;
 var play_level_three: states.Play_Level_Three;
 var win_state: states.Win;
+var transition_state: states.TransitionState;
 
 var gameover: states.Gameover;
 var currentstate;
@@ -103,6 +114,8 @@ var startbutton: objects.Button;
 var playagainbutton: objects.Button;
 
 var playButton: objects.Button;
+var playButton2: objects.Button;
+var nextLevelButton: objects.Button;
 var instructionsButton: objects.Button;
 var levelsButton: objects.Button;
 var exitButton: objects.Button;
@@ -110,6 +123,9 @@ var level1Button: objects.Button;
 var level2Button: objects.Button;
 var level3Button: objects.Button;
 var menuButton: objects.Button;
+var nextButton: objects.Button;
+var backButton: objects.Button;
+
 
 
 
@@ -183,6 +199,7 @@ function main() {
      // play = new states.Play();
   //  currentstate = play;
   // play_level_two = new states.Play_Level_Two();
+    config.ACTIVE_STATE = constants.MENU_STATE;
    currentstate =menu;
    // gameover = new states.Gameover();
   //  currentstate = gameover;
@@ -198,6 +215,8 @@ function changeState(state: number): void {
     switch (state) {
         case constants.MENU_STATE:
             // instantiate menu screen
+
+            config.ACTIVE_STATE = constants.MENU_STATE;
             menu = new states.Menu();
             currentstate = menu;
             //currentstate = play;
@@ -208,6 +227,7 @@ function changeState(state: number): void {
 
         case constants.PLAY_STATE:
             // instantiate play screen
+            config.ACTIVE_STATE = constants.PLAY_STATE;
             play = new states.Play();
             currentstate = play;
          //   play_level_two = new states.Play_Level_Two();
@@ -253,5 +273,13 @@ function changeState(state: number): void {
             // play_level_two = new states.Play_Level_Two();
             // currentstate = play_level_two;
             break;
+        case constants.TRANSITION_STATE:
+            transition_state = new states.TransitionState();
+            currentstate = transition_state;
+            //currentstate = play;
+            // play_level_two = new states.Play_Level_Two();
+            // currentstate = play_level_two;
+            break;
+
     }
 }

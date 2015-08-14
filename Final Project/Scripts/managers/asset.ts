@@ -16,10 +16,17 @@
             { id: "level2Button", src: "assets/images/level2Button.png" },
             { id: "level3Button", src: "assets/images/level3Button.png" },
             { id: "menuButton", src: "assets/images/menuButton.png" },
+            { id: "nextButton", src: "assets/images/nextButton.png" },
+            { id: "backButton", src: "assets/images/backButton.png" },
+            { id: "transition", src: "assets/images/transition.png" },
+            { id: "nextLevelButton", src: "assets/images/nextLevelButton.png" },
           
           
             { id: "gameoverlbl", src: "assets/images/gameover.png" },
             { id: "winlbl", src: "assets/images/winlbl.png" },
+            { id: "l1instlbl", src: "assets/images/Level1Instructions.png" },
+            { id: "l2instlbl", src: "assets/images/Level2Instructions.png" },
+            { id: "l3instlbl", src: "assets/images/Level3Instructions.png" },
          
             { id: "startbutton", src: "assets/images/startbutton.png" },
             { id: "ringing", src: "assets/audio/pickupcoin.wav" },

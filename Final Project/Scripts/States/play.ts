@@ -31,6 +31,22 @@
 
         }
 
+        public stateTransition() {
+            game.removeChild(playButton);
+            game.removeChild(exitButton);
+            game.removeChild(instructionsButton);
+
+            game.removeChild(menuButton);
+            game.removeChild(level1inst);
+            game.removeChild(level2inst);
+            game.removeChild(level3inst);
+            game.removeChild(backButton);
+            game.removeChild(nextButton);
+            game.removeChild(playButton2); 
+           
+            game.addChild(level2inst);
+
+        }
 
 
         main() {

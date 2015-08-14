@@ -72,6 +72,7 @@
     <Content Include="assets\audio\watermelon.wav" />
     <Content Include="assets\audio\weep.wav" />
     <Content Include="assets\images\Arrow.png" />
+    <Content Include="assets\images\backButton.png" />
     <Content Include="assets\images\Background.png" />
     <Content Include="assets\images\Background2.png" />
     <Content Include="assets\images\backgroundImage.jpg" />
@@ -85,13 +86,18 @@
     <Content Include="assets\images\Iron_Bow.png" />
     <Content Include="assets\images\island.png" />
     <Content Include="assets\images\level1Button.png" />
+    <Content Include="assets\images\Level1Instructions.png" />
     <Content Include="assets\images\level2Button.png" />
+    <Content Include="assets\images\Level2Instructions.png" />
     <Content Include="assets\images\level3Button.png" />
+    <Content Include="assets\images\Level3Instructions.png" />
     <Content Include="assets\images\levelsButton.png" />
     <Content Include="assets\images\mainbackground.png" />
     <Content Include="assets\images\menu.png" />
     <Content Include="assets\images\menuButton.png" />
     <Content Include="assets\images\MyJason.png" />
+    <Content Include="assets\images\nextButton.png" />
+    <Content Include="assets\images\nextLevelButton.png" />
     <Content Include="assets\images\obstacle1.png" />
     <Content Include="assets\images\obstacle2.png" />
     <Content Include="assets\images\ocean.gif" />
@@ -100,6 +106,7 @@
     <Content Include="assets\images\ring.png" />
     <Content Include="assets\images\startbutton.png" />
     <Content Include="assets\images\superman.png" />
+    <Content Include="assets\images\transition.png" />
     <Content Include="assets\images\winlbl.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\config\config.js" />
@@ -192,6 +199,7 @@
     <TypeScriptCompile Include="Scripts\States\play.ts" />
     <TypeScriptCompile Include="Scripts\States\play_level_three.ts" />
     <TypeScriptCompile Include="Scripts\States\play_level_two.ts" />
+    <TypeScriptCompile Include="Scripts\States\transitionstate.ts" />
     <TypeScriptCompile Include="Scripts\States\win.ts" />
     <TypeScriptCompile Include="Scripts\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\easeljs\easeljs.d.ts" />

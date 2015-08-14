@@ -57,6 +57,7 @@
     export var DORAEMON_DIEING: boolean = false;
     export var HAVING_CONTROLS: boolean = true;
     export var OBSTACLE_COLLIDING: boolean = false;
+    export var MENU_INSTRUCTIONS: number = 0;
 
     // avatar constants
     export var PLAYER_FORWARD: number = 5;
